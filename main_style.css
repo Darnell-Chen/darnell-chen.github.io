@@ -1,0 +1,13 @@
+.googleImg {
+  margin:auto;
+  display: block;
+}
+
+.inputItem {
+    padding: 40px;
+    border-radius: 90px;
+    display: block;
+    justify-self: center;
+    font-size: 70px;
+    border-color: gray;
+}
