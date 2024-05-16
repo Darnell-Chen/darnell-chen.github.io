@@ -3,5 +3,14 @@
     max-height: 200px;
     justify-content: center;
     text-align: center;
+    background-color: #FBD603;
+}
 
+.myImage {
+    text-align: left;
+    margin-left: 500px;
+}
+
+.wholeBody {
+    background-color: #FBD603;
 }
