@@ -5,7 +5,11 @@
 
 @keyframes fadeOutAnimation {
   /* set this to opacity 0 with css once its over */
-  to {
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(100vh);
   }
@@ -18,20 +22,45 @@
   width: 100vw;
   background-color: #C8D9F0;
   z-index: 200;
-  animation: fadeOutAnimation 5s forwards;
+  display: grid;
+  place-content: center;
+  animation: fadeOutAnimation 20s ease forwards;
 }
 
 #intro-screen :active {
   animation: fadeOutAnimation 5s;
 }
 
-#intro-p {
+.intro-p {
   padding: 0;
   margin: 0;
   font-size: 5vh;
-  font-weight: bold;
-  text-align: center;
-  line-height: 100vh;
+  font-family: monospace;
+  position: relative;
+}
+
+.intro-p::before, 
+.intro-p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.intro-p::before {
+  background: #C8D9F0;
+  animation: typewriter 10s steps(22) forwards;
+}
+
+@keyframes typewriter {
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 body {
