@@ -1,11 +1,11 @@
 function moveIntroScreen() {
-    if (localStorage.getItem("played") !== null) {
+    if (sessionStorage.getItem("played") !== null) {
         var introContainer = document.getElementById("intro-container");
         introContainer.style.opacity = "1";
 
         document.getElementById("intro-container").addEventListener("click", commenceIntro());
         sessionStorage.setItem("played", "true");   
-        console.log(localStorage.getItem("played"));
+        console.log(sessionStorage.getItem("played"));
     } else {
         var introContainer = document.getElementById("intro-container");
         introContainer.style.opacity = "1";
