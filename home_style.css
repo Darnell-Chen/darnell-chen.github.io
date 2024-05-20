@@ -1,11 +1,11 @@
 * {
   color: aliceblue;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  font-family: monospace;
 }
 
 @keyframes fadeOutAnimation {
   /* set this to opacity 0 with css once its over */
-  50% {
+  80% {
     transform: translateY(0);
   }
 
@@ -24,7 +24,7 @@
   z-index: 200;
   display: grid;
   place-content: center;
-  animation: fadeOutAnimation 20s ease forwards;
+  /* animation: fadeOutAnimation 10s ease forwards; */
 }
 
 #intro-screen :active {
@@ -34,9 +34,13 @@
 .intro-p {
   padding: 0;
   margin: 0;
-  font-size: 5vh;
+  font-size: 5em;
   font-family: monospace;
   position: relative;
+  grid-area: overlap;
+  letter-spacing: 10px;
+  border-right: 3px solid;
+  padding: 5px;
 }
 
 .intro-p::before, 
@@ -50,17 +54,38 @@
 }
 
 .intro-p::before {
-  background: #C8D9F0;
-  animation: typewriter 10s steps(22) forwards;
+  background: teal;
+  animation: typewriter 2s steps(3) forwards, typewriter2 4s steps(20) forwards, typewriter3 5s steps(23) forwards;
+  animation-delay: 0s, 2s, 7s;
 }
 
 @keyframes typewriter {
   50% {
+    transform: translateX(13%);
+  }
+  100% {
+    transform: translateX(13%);
+  }
+}
+
+@keyframes typewriter2 {
+  100% {
     transform: translateX(100%);
   }
+}
+
+@keyframes typewriter3 {
   100% {
     transform: translateX(0%);
   }
+}
+
+.intro-p2 {
+  padding: 0;
+  margin: 0;
+  font-size: 5vh;
+  font-family: monospace;
+  grid-area: overlap;
 }
 
 body {
