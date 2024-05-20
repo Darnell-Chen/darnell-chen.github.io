@@ -16,7 +16,7 @@
 }
 
 #intro-screen {
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -77,9 +77,9 @@
 
 .intro-p::before {
   background: #C8D9F0;
-  animation: blinking 1s step-end infinite, typewriter 1s steps(3) forwards, typewriter2 1.5s steps(20) forwards, typewriter3 1.5s steps(23) forwards, removeblinking forwards;
-  animation-delay: 0s, 0s, 1.5s, 3.7s, 7s;
-  border-left: 1rem solid white;
+  animation: showbar 1s step-end forwards, blinking 1s step-end infinite, typewriter 1s steps(3) forwards, typewriter2 1.5s steps(20) forwards, typewriter3 1.5s steps(23) forwards, removeblinking forwards;
+  animation-delay: 0s, 0s, 0s, 1.5s, 3.7s, 7s;
+  border-left: 1rem transparent white;
 }
 
 .intro-p3 {
@@ -160,6 +160,15 @@
 @keyframes align {
   to {
     justify-content: center;
+  }
+}
+
+@keyframes showbar {
+  50% {
+    border-left: transparent white;
+  }
+  100% {
+    border-left: 1rem solid white;
   }
 }
 

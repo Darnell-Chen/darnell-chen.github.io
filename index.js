@@ -1,15 +1,14 @@
 function moveIntroScreen() {
-    if (sessionStorage.getItem("played") !== null) {
-        var introContainer = document.getElementById("intro-container");
-        introContainer.style.opacity = "1";
-
-        document.getElementById("intro-container").addEventListener("click", commenceIntro());
-        sessionStorage.setItem("played", "true");   
-        console.log(sessionStorage.getItem("played"));
+    if (sessionStorage.getItem("played") === null) {
+        document.getElementById("intro-screen").addEventListener("click", commenceIntro);
+        sessionStorage.setItem("played", "true");
+        console.log("not played");
     } else {
+        console.log("already played");
         var introContainer = document.getElementById("intro-container");
         introContainer.style.opacity = "1";
         commenceIntro();
+        sessionStorage.setItem("played", null);
     }
 }
 
@@ -42,7 +41,7 @@ function commenceIntro(){
     setTimeout(() => {
         var introScreens = introContainer.children;
 
-        let seconds = .75;
+        let seconds = .35;
 
         for (var i = 0; i < introScreens.length; i++) {
             introScreens[i].style.transition = `transform ${seconds}s ease-in 0s`;
