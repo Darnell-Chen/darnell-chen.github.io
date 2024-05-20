@@ -3,7 +3,13 @@ function moveIntroScreen() {
 
     var introContainer = document.getElementById("intro-container");
 
-    const colors = ["#cadafe", "#aac4fe", "#92b3fd", "#79a3fd"];
+    // final color is the background color of default page
+    const colors = ["#C8D9F0", "#BBCFEB", "#AFC5E7", "#A2BCE3", "#96B2DF", "#89A8DB", "#7D9ED7", "#7094D3", "#648ACF", "#5780CB", "#4B76C7", "#5780CB", "#648ACF", "#7094D3", "#7D9ED7", "#89A8DB", "#96B2DF", "#A2BCE3", "#AFC5E7", "#BBCFEB", "#C8D9F0"];
+
+
+
+    // this is the z-index of the initial intro screen
+    var myZ = 200;
 
     for (var i = 0; i < colors.length; i++) {
         var div = document.createElement("div");
@@ -11,18 +17,25 @@ function moveIntroScreen() {
         div.style.height = "100vh";
         div.style.backgroundColor = colors[i];
         div.style.position = "fixed";
-        div.style.opacity = "1";
+        div.style.transform = "translateY(0)";
+
+        let currZIndex = myZ - i;
+        div.style.zIndex = currZIndex;
 
         introContainer.append(div);
     }
 
-    var introScreens = introContainer.children;
+    // a forced repaint - basically allows the divs time to render before this executes
+    setTimeout(() => {
+        var introScreens = introContainer.children;
 
-    let seconds = 10.0;
+        let seconds = 1;
 
-    for (var i = 0; i < introScreens.length; i++) {
-        introScreens[i].style.transition = "transform " + seconds.toString() + "s linear 0s";
-        introScreens[i].style.transform = "translateY(100vh)";
-        seconds += 1;
-    }
+        for (var i = 0; i < introScreens.length; i++) {
+            console.log(`Animating div ${i} with transition of ${seconds} seconds`);
+            introScreens[i].style.transition = `transform ${seconds}s ease-in 0s`;
+            introScreens[i].style.transform = "translateY(100vh)";
+            seconds += .1;
+        }
+    }, 100);
 }
