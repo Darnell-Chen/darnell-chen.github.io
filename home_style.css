@@ -27,8 +27,14 @@
   /* animation: fadeOutAnimation 10s ease forwards; */
 }
 
-#intro-screen :active {
-  animation: fadeOutAnimation 5s;
+#intro-screen h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 5em;
+  font-family: monospace;
+  position: relative;
+  grid-area: overlap;
+  letter-spacing: 10px;
 }
 
 .intro-p {
@@ -39,12 +45,21 @@
   position: relative;
   grid-area: overlap;
   letter-spacing: 10px;
-  border-right: 3px solid;
-  padding: 5px;
+  z-index: 102;
+  animation: removeblinking step-end forwards;
+  animation-delay: 7s;
+}
+
+.intro-p2 {
+  z-index: 101;
 }
 
 .intro-p::before, 
-.intro-p::after {
+.intro-p::after,
+.intro-p2::before,
+.intro-p2::after,
+.intro-p3::before,
+.intro-p3::after {
   content: "";
   position: absolute;
   top: 0;
@@ -53,11 +68,20 @@
   left: 0;
 }
 
-.intro-p::before {
-  background: teal;
-  animation: typewriter 2s steps(3) forwards, typewriter2 4s steps(20) forwards, typewriter3 5s steps(23) forwards;
-  animation-delay: 0s, 2s, 7s;
+.intro-p2::before {
+  background: #C8D9F0;
+  animation: blinking2 1s step-end infinite, typewriter2 4s steps(23) forwards, removeblinking forwards;
+  animation-delay: 7s, 7s, 12s;
+  border-left: 1rem transparent white;
 }
+
+.intro-p::before {
+  background: #C8D9F0;
+  animation: blinking 1s step-end infinite, typewriter 1s steps(3) forwards, typewriter2 1.5s steps(20) forwards, typewriter3 1.5s steps(23) forwards, removeblinking forwards;
+  animation-delay: 0s, 0s, 1.5s, 3.7s, 7s;
+  border-left: 1rem solid white;
+}
+
 
 @keyframes typewriter {
   50% {
@@ -80,12 +104,36 @@
   }
 }
 
-.intro-p2 {
-  padding: 0;
-  margin: 0;
-  font-size: 5vh;
-  font-family: monospace;
-  grid-area: overlap;
+@keyframes blinking {
+  50% {
+    border-left-color: transparent;
+  }
+}
+
+@keyframes blinking2 {
+  50% {
+    border-left: 1rem solid white;
+  }
+}
+
+@keyframes removeblinking {
+  100% {
+    border-left-color: transparent;
+    opacity: 0;
+  }
+}
+
+.intro-p3 {
+  z-index: 100;
+  position: absolute;
+  top: 1.5em;
+}
+
+.intro-p3::before {
+  background: teal;
+  animation: blinking2 1s step-end infinite, typewriter2 2s steps(15) forwards;
+  animation-delay: 12s , 13s;
+  border-left: 1rem transparent white;
 }
 
 body {
