@@ -24,10 +24,10 @@
   z-index: 200;
   display: grid;
   place-content: center;
-  /* animation: fadeOutAnimation 10s ease forwards; */
 }
 
 #intro-screen h1 {
+  white-space: nowrap;
   padding: 0;
   margin: 0;
   font-size: 5em;
@@ -45,13 +45,13 @@
   position: relative;
   grid-area: overlap;
   letter-spacing: 10px;
-  z-index: 102;
+  z-index: 202;
   animation: removeblinking step-end forwards;
   animation-delay: 7s;
 }
 
 .intro-p2 {
-  z-index: 101;
+  z-index: 201;
 }
 
 .intro-p::before, 
@@ -70,8 +70,8 @@
 
 .intro-p2::before {
   background: #C8D9F0;
-  animation: blinking2 1s step-end infinite, typewriter2 4s steps(23) forwards, removeblinking forwards;
-  animation-delay: 7s, 7s, 12s;
+  animation: blinking2 1s step-end infinite, typewriter2 1.5s steps(23) forwards, removeblinking forwards;
+  animation-delay: 7s, 7s, 9s;
   border-left: 1rem transparent white;
 }
 
@@ -82,6 +82,23 @@
   border-left: 1rem solid white;
 }
 
+.intro-p3 {
+  z-index: 201;
+  position: absolute;
+  top: 1.5em;
+
+  /* There's a weird abrupt shift before the shrinking, I could just add an animation to fade out the words to hide it, 
+  then fade back in */
+  animation: fullblinking 1s ease-in-out infinite, shrink 1s ease-in-out forwards;
+  animation-delay: 12s, 12s;
+}
+
+.intro-p3::before {
+  background: #C8D9F0;
+  animation: blinking2 1s step-end infinite, typewriter2 1.5s steps(23) forwards, removeblinking forwards;
+  animation-delay: 9s , 9.5s, 11.5s;
+  border-left: 1rem transparent white;
+}
 
 @keyframes typewriter {
   50% {
@@ -123,17 +140,27 @@
   }
 }
 
-.intro-p3 {
-  z-index: 100;
-  position: absolute;
-  top: 1.5em;
+@keyframes fullblinking {
+  50% {
+    opacity: 0;
+  }
 }
 
-.intro-p3::before {
-  background: teal;
-  animation: blinking2 1s step-end infinite, typewriter2 2s steps(15) forwards;
-  animation-delay: 12s , 13s;
-  border-left: 1rem transparent white;
+@keyframes shrink {
+  50% {
+    text-align: center;
+    font-size: 5em;
+  }
+  to {
+    font-size: 4em;
+    text-align: center;
+  }
+}
+
+@keyframes align {
+  to {
+    justify-content: center;
+  }
 }
 
 body {
