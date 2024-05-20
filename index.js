@@ -7,9 +7,9 @@ function moveIntroScreen() {
         sessionStorage.setItem("played", "true");   
         console.log(localStorage.getItem("played"));
     } else {
-        console.log("here");
-        // var introContainer = document.getElementById("intro-container");
-        // introContainer.style.opacity = "1";
+        var introContainer = document.getElementById("intro-container");
+        introContainer.style.opacity = "1";
+        commenceIntro();
     }
 }
 
@@ -45,7 +45,6 @@ function commenceIntro(){
         let seconds = .75;
 
         for (var i = 0; i < introScreens.length; i++) {
-            console.log(`Animating div ${i} with transition of ${seconds} seconds`);
             introScreens[i].style.transition = `transform ${seconds}s ease-in 0s`;
             introScreens[i].style.transform = "translateY(100vh)";
             seconds += .05;
