@@ -1,6 +1,19 @@
 function moveIntroScreen() {
-    console.log("moving intro");
+    if (localStorage.getItem("played") !== null) {
+        var introContainer = document.getElementById("intro-container");
+        introContainer.style.opacity = "1";
 
+        document.getElementById("intro-container").addEventListener("click", commenceIntro());
+        sessionStorage.setItem("played", "true");   
+        console.log(localStorage.getItem("played"));
+    } else {
+        console.log("here");
+        // var introContainer = document.getElementById("intro-container");
+        // introContainer.style.opacity = "1";
+    }
+}
+
+function commenceIntro(){
     var introContainer = document.getElementById("intro-container");
 
     // final color is the background color of default page
@@ -29,13 +42,13 @@ function moveIntroScreen() {
     setTimeout(() => {
         var introScreens = introContainer.children;
 
-        let seconds = 1;
+        let seconds = .75;
 
         for (var i = 0; i < introScreens.length; i++) {
             console.log(`Animating div ${i} with transition of ${seconds} seconds`);
             introScreens[i].style.transition = `transform ${seconds}s ease-in 0s`;
             introScreens[i].style.transform = "translateY(100vh)";
-            seconds += .1;
+            seconds += .05;
         }
     }, 100);
 }
