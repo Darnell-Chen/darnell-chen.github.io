@@ -1,0 +1,49 @@
+#project-section {
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2.5vw;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 5vw;
+}
+
+.projects {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(140, 190, 255);
+    border-radius: 1vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.projects>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.projects>p {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.501);
+    top: 80%;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects>p:hover{
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.project-name {
+    margin: 0px;
+    font-size: 25px;
+    font-weight: bold;
+}
