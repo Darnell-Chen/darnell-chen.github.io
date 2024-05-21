@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="default-items.css">
         <link rel="stylesheet" href="index.css">
+        <script src="default-items.js"></script>
         <script src="index.js"></script>
     </head>
-    <body onload="moveIntroScreen()">
+    <body onload="moveIntroScreen(); navPage('index.html')">
         <div id="intro-container">
             <div id="intro-screen">
                 <h1 class="intro-p">hi. my name is darnell.</h1>
@@ -20,9 +21,9 @@
             <a class="nav_logo" href="/">@ <span class="logo-span">d a r n e l l _ c h e n</span></a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#">Resume</a></li>
+                    <li><a id="navHome" href="#">Home</a></li>
+                    <li><a id="navProjects" href="#">Projects</a></li>
+                    <li><a id="navResume" href="#">Resume</a></li>
                 </ul>
             
             </nav>

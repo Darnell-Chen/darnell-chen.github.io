@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="default-items.css">
     <link rel="stylesheet" href="projects.css">
+    <script src="default-items.js"></script>
     <script src="projects.js"></script>
 </head>
-<body>
+<body onload="navPage('projects.html')">
+    <div id="alt-intro"></div>
+
     <header class="nav_bar">
         <a class="nav_logo" href="/">@ <span class="logo-span">d a r n e l l _ c h e n</span></a>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a id="navHome" href="#">Home</a></li>
+                <li><a id="navProjects" href="#">Projects</a></li>
+                <li><a id="navResume" href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <div id="project-section">
-        <a href="#" class="projects">
+        <a href="https://github.com/Darnell-Chen/shoppd" class="projects">
             <p>
                 <span class="project-name">Shopp'd</span>
                 <span class="date">Apr - May 2024</span>
@@ -47,7 +50,7 @@
 
 
 
-        <a href="#" class="projects">
+        <a href="https://github.com/Darnell-Chen/Spotify-UnWrapped" class="projects">
             <p>
                 <span class="project-name">Spotify UnWrapped</span>
                 <span class="date">Mar - Apr 2024</span>
@@ -57,7 +60,7 @@
                 <br>
 
                 Spotify UnWrapped is an Android app that taps into your Spotify account to provide a personalized Spotify Wrapped summary. 
-                Unlike the traditional Spotify Wrapped, this app offers the convenience of generating your Wrapped summary anytime throughout the year. 
+                Unlike the traditional Spotify Wrapped, this app offers the ability of generating your Wrapped summary any time of the year. 
                 Moreover, it saves your Wrapped summary for future viewing, ensuring you can revisit it at any time.
 
                 <br>
@@ -74,7 +77,32 @@
 
 
 
-        <a href="#" class="projects">
+
+        <a href="https://github.com/Darnell-Chen/Android_Scheduler_App" class="projects">
+            <p>
+                <span class="project-name">Scheduling App</span>
+                <span class="date">Jan - Feb 2024</span>
+                <span class="language">Java</span>
+
+                <br>
+                <br>
+                
+                This straightforward Android app helps users manage their school schedules with ease. 
+                It features a school-friendly format that allows students to track their assignments and tasks effectively.
+
+                <br>
+                <br>
+
+                IDE: Android Studio
+                <br>
+                Other: XML
+            </p>
+            <img src="images/projects/Schedule.jpg">
+        </a>
+
+
+
+        <a href="https://github.com/Darnell-Chen/Local_Covid_Cases" class="projects">
             <p>
                 <span class="project-name">Covid Tracker</span>
                 <span class="date">Jan 2023</span>
@@ -98,29 +126,6 @@
 
 
 
-        <a href="#" class="projects">
-            <p>
-                <span class="project-name">Scheduling App</span>
-                <span class="date">Jan - Feb 2024</span>
-                <span class="language">Java</span>
-
-                <br>
-                <br>
-                
-                This straightforward Android app helps users manage their school schedules with ease. 
-                It features a school-friendly format that allows students to track their assignments and tasks effectively.
-
-                <br>
-                <br>
-
-                IDE: Android Studio
-                <br>
-                Other: XML
-            </p>
-            <img src="images/projects/Schedule.jpg">
-        </a>
-            
-        </div>
     </div>
 </body>
 </html>
