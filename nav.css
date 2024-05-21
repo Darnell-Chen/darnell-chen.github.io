@@ -1,10 +1,14 @@
+:root {
+    --baseColor: #87b9ff;
+}
+
 * {
     color: aliceblue;
     font-family: monospace;
 }
 
 body {
-    background-color: #C8D9F0;
+    background-color: var(--baseColor);
     margin: 0;
     /* background-image: radial-gradient(black 1px, transparent 0);
     background-size: 40px 40px;
@@ -77,11 +81,11 @@ nav a:hover{
     position: fixed;
     height: 100dvh;
     width: 100dvw;
-    background-color: #C8D9F0;
+    background-color: var(--baseColor);
     z-index: 200;
     display: grid;
     place-content: center;
-    animation: moveIntro 1s ease-in-out forwards;
+    animation: moveIntro 0.7s ease-in-out forwards;
   }
 
   @keyframes moveIntro {

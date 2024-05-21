@@ -1,3 +1,9 @@
+:root {
+  --baseColor: #87b9ff;
+  --baseColor2: #c9ffe8;
+  --baseColor3: #deffef;
+}
+
 @keyframes fadeOutAnimation {
   /* set this to opacity 0 with css once its over */
   80% {
@@ -15,7 +21,7 @@
   position: fixed;
   height: 100dvh;
   width: 100dvw;
-  background-color: #C8D9F0;
+  background-color: var(--baseColor);
   z-index: 200;
   display: grid;
   place-content: center;
@@ -71,7 +77,7 @@
 }
 
 .intro-p::before {
-  background: #C8D9F0;
+  background: var(--baseColor);
   animation: showbar 1s step-end forwards, blinking 1s step-end infinite, typewriter 1s steps(3) forwards, typewriter2 1.5s steps(20) forwards, typewriter3 1.5s steps(23) forwards, removeblinking forwards;
   animation-delay: 0s, 0s, 0.3s, 1.5s, 3.7s, 7s;
   border-left: 1rem transparent white;
@@ -89,7 +95,7 @@
 }
 
 .intro-p3::before {
-  background: #C8D9F0;
+  background: var(--baseColor);
   animation: blinking2 1s step-end infinite, typewriter2 1.5s steps(23) forwards, removeblinking forwards;
   animation-delay: 9s , 9.5s, 11.5s;
   border-left: 1rem transparent white;
@@ -173,10 +179,10 @@
   margin: 0px;
   height: 90vh;
   overflow: hidden;
-  background-color: #e8fdff;
+  background-color: var(--baseColor2);
   width: 100vw;
   justify-content: space-between;
-  background: linear-gradient(to left, rgb(249, 250, 240), transparent 90%);
+  background: linear-gradient(to right, var(--baseColor), var(--baseColor2) 90%);
 }
 
 .first-section p {
@@ -195,7 +201,7 @@
 
 #my-name {
   font-size: 50px;
-  color: 	#feffdd;
+  color: 	var(--baseColor2);
   justify-content: left;
   font-size: 50px;
   font-weight: bold;
@@ -226,7 +232,7 @@
 .about-me {
   text-wrap: nowrap;
   font-size: 27px;
-  color: 	#7c9ccc;
+  color: 	var(--baseColor3);
   font-weight: bold;
 }
 

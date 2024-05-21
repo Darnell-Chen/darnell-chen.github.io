@@ -5,19 +5,7 @@ function navPage(currPage) {
 
     function goIndex() {
         if (currPage !== "index.html") {
-            var div = document.createElement("div");
-            div.style.width = "100vw";
-            div.style.height = "100vh";
-            div.style.backgroundColor = "#C8D9F0";
-            div.style.position = "fixed";
-            div.style.transform = "translateY(100vh)";
-            
-            document.body.append(div);
-            
-            window.requestAnimationFrame(() => {
-                div.style.transition = "transform 0.5s ease-in-out 0s";
-                div.style.transform = "translateY(-100vh)";
-            });
+            divAnimation();
 
             
             setTimeout(() => {
@@ -32,19 +20,7 @@ function navPage(currPage) {
     function goProjects() {
         console.log("hello world");
         if (currPage !== "projects.html") {
-            var div = document.createElement("div");
-            div.style.width = "100vw";
-            div.style.height = "100vh";
-            div.style.backgroundColor = "#C8D9F0";
-            div.style.position = "fixed";
-            div.style.transform = "translateY(100vh)";
-            
-            document.body.append(div);
-            
-            window.requestAnimationFrame(() => {
-                div.style.transition = "transform 0.5s ease-in-out 0s";
-                div.style.transform = "translateY(-100vh)";
-            });
+            divAnimation();
 
             setTimeout(() => {
                 window.location.href = "projects.html";
@@ -53,4 +29,22 @@ function navPage(currPage) {
     }
 
     let resume = document.getElementById("navResume");
+}
+
+function divAnimation() {
+    const BASECOLOR = "#87b9ff";
+
+    var div = document.createElement("div");
+    div.style.width = "100vw";
+    div.style.height = "100vh";
+    div.style.backgroundColor = BASECOLOR;
+    div.style.position = "fixed";
+    div.style.transform = "translateY(100vh)";
+    
+    document.body.append(div);
+    
+    window.requestAnimationFrame(() => {
+        div.style.transition = "transform 0.5s ease-in-out 0s";
+        div.style.transform = "translateY(-100vh)";
+    });
 }

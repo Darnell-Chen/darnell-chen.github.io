@@ -1,12 +1,16 @@
+:root {
+    --baseColor: #87b9ff;
+}
+
 #project-section {
     background-image: radial-gradient(black 1px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 2.5vw;
     box-sizing: border-box;
     background-color: white;
@@ -16,7 +20,7 @@
 .projects {
     height: 100%;
     width: 100%;
-    background-color: rgb(140, 190, 255);
+    background-color: var(--baseColor);
     border-radius: 1vw;
     overflow: hidden;
     position: relative;
@@ -53,10 +57,5 @@
 }
 
 .language {
-    float: inline-end;
     font-size: 20px;
-}
-
-.language ::before {
-    content: " | ";
 }
