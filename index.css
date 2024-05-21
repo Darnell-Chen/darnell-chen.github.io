@@ -70,7 +70,7 @@
 }
 
 .intro-p2::before {
-  background: #C8D9F0;
+  background: var(--baseColor);
   animation: blinking2 1s step-end infinite, typewriter2 1.5s steps(23) forwards, removeblinking forwards;
   animation-delay: 7s, 7s, 9s;
   border-left: 1rem transparent white;
@@ -182,7 +182,9 @@
   background-color: var(--baseColor2);
   width: 100vw;
   justify-content: space-between;
-  background: linear-gradient(to right, var(--baseColor), var(--baseColor2) 90%);
+  background: linear-gradient(270deg, var(--baseColor), rgba(255,0,0,0) 30.71%),
+  linear-gradient(250deg, var(--baseColor2), rgba(0,255,0,0) 70.71%),
+  linear-gradient(300deg, var(--baseColor2), rgba(0,0,255,0) 70.71%);
 }
 
 .first-section p {
@@ -196,7 +198,7 @@
 .myImage img{
   float:right;
   height: 90vh;
-  padding-right: 50px;
+  padding-right: 0px;
 }
 
 #my-name {

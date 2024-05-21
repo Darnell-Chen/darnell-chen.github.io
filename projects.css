@@ -1,5 +1,6 @@
 :root {
     --baseColor: #87b9ff;
+    --baseColor2: #c9ffe8;
 }
 
 #project-section {
@@ -13,7 +14,7 @@
     grid-template-rows: 1fr;
     gap: 2.5vw;
     box-sizing: border-box;
-    background-color: white;
+    background: linear-gradient(0turn, var(--baseColor), var(--baseColor2),  var(--baseColor2), var(--baseColor2), var(--baseColor));
     padding: 5vw;
 }
 

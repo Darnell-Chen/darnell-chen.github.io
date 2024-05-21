@@ -16,7 +16,7 @@ function commenceIntro(){
     var introContainer = document.getElementById("intro-container");
 
     // final color is the background color of default page
-    const colors = ["#87b9ff", "#BBCFEB", "#AFC5E7", "#A2BCE3", "#96B2DF", "#89A8DB", "#7D9ED7", "#7094D3", "#648ACF", "#5780CB", "#4B76C7", "#5780CB", "#648ACF", "#7094D3", "#7D9ED7", "#89A8DB", "#96B2DF", "#A2BCE3", "#AFC5E7", "#BBCFEB", "#87b9ff"];
+    const colors = ["#87b9ff", "#8fc2f8", "#98cbf1", "#a0d4ea", "#a8ddeb", "#b0e5e1", "#b9eee2", "#c1f6db", "#c9ffdc", "#c9ffe8", "#c9ffdc", "#c1f6db", "#b9eee2", "#b0e5e1", "#a8ddeb", "#a0d4ea", "#98cbf1", "#8fc2f8", "#87b9ff"];
 
 
 
