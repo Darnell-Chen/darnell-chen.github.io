@@ -1,4 +1,7 @@
 #project-section {
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
     height: 90vh;
     width: 100vw;
     display: grid;
@@ -25,25 +28,35 @@
     height: 100%;
 }
 
+.projects:hover p{
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
 .projects>p {
     position: absolute;
     margin: 0;
     height: 100%;
     width: 100%;
-    padding-top: 15px;
-    padding-left: 20px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.501);
     top: 80%;
     transition: all 0.5s ease-in-out;
-}
-
-.projects>p:hover{
-    top: 0%;
-    background-color: rgba(0, 0, 0, 0.836);
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
 .project-name {
     margin: 0px;
     font-size: 25px;
     font-weight: bold;
+}
+
+.language {
+    float: inline-end;
+    font-size: 20px;
+}
+
+.language ::before {
+    content: " | ";
 }
