@@ -71,3 +71,21 @@ nav a:hover{
     color: #fffff1;
     transform: translateY(5px);
 }
+
+#alt-intro {
+    opacity: 1;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: #C8D9F0;
+    z-index: 200;
+    display: grid;
+    place-content: center;
+    animation: moveIntro 1s ease-in-out forwards;
+  }
+
+  @keyframes moveIntro {
+    to {
+        transform: translateY(100vh);
+    }
+  }
