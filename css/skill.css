@@ -6,9 +6,11 @@
     --fair: #b5ffe4;
 
     /* Proficiency Percentages} */
-    --perPro: 90%;
-    --perInter: 70%;
+    --perPro: 80%;
+    --perInter: 60%;
     --perFair: 40%;
+
+    --initialPercent: 0%;
 }
 
 .mySkills {
@@ -34,16 +36,17 @@
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
+    margin: 0px;
 }
 
 .mySkills * {
     box-sizing: border-box;
-    border-radius: 2em;
+    /* border-radius: 2em; */
 }
 
 .skill-container {
     width: 100%; 
-    background-color: #ddd;
+    background-color: #eee;
 }
   
 .skills {
@@ -55,8 +58,58 @@
     font-size: 1.5em;
 }
 
-.java {width: var(--perPro); background-color: var(--proficient);}
-.python {width: var(--perInter); background-color: var(--intermediate);}
-.js {width: var(--perFair); background-color: var(--fair);}
-.css {width: var(--perFair); background-color: var(--fair);}
-.html {width: var(--perFair); background-color: var(--fair);}
+
+
+
+/*     Sets initial percentage     */
+
+.java {width: var(--initialPercent); background-color: var(--proficient);}
+.python {width: var(--initialPercent); background-color: var(--intermediate);}
+.js {width: var(--initialPercent); background-color: var(--fair);}
+.css {width: var(--initialPercent); background-color: var(--fair);}
+.html {width: var(--initialPercent); background-color: var(--fair);}
+
+
+/* Attaches the animation to grow to final percentage */
+
+#skill-div.skillAnim .java {
+    animation: proficientAnim 2s ease-in-out forwards;
+}
+
+#skill-div.skillAnim .python {
+    animation: intermediateAnim 2s ease-in-out forwards;
+}
+
+#skill-div.skillAnim .js {
+    animation: fairAnim 2s ease-in-out forwards;
+}
+
+#skill-div.skillAnim .css {
+    animation: fairAnim 2s ease-in-out forwards;
+}
+
+#skill-div.skillAnim .html {
+    animation: fairAnim 2s ease-in-out forwards;
+}
+
+
+/* Our Various Animations */
+
+@keyframes proficientAnim {
+    to {
+        width: var(--perPro);
+    }
+}
+
+@keyframes intermediateAnim {
+    to {
+        width: var(--perInter);
+    }
+}
+
+
+@keyframes fairAnim {
+    to {
+        width: var(--perFair);
+    }
+}

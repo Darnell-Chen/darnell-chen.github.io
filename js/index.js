@@ -1,10 +1,10 @@
 function moveIntroScreen() {
+
+    // we'll store whether or not the intro screen was played inside of session storage
     if (sessionStorage.getItem("played") === null) {
         document.getElementById("intro-screen").addEventListener("click", commenceIntro);
         sessionStorage.setItem("played", "true");
-        console.log("not played");
     } else {
-        console.log("already played");
         var introContainer = document.getElementById("intro-container");
         introContainer.style.opacity = "1";
         commenceIntro();
