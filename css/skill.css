@@ -1,0 +1,62 @@
+
+:root {
+    /* Proficiency Colors */
+    --proficient: #00ffa2;
+    --intermediate: #6effca;
+    --fair: #b5ffe4;
+
+    /* Proficiency Percentages} */
+    --perPro: 90%;
+    --perInter: 70%;
+    --perFair: 40%;
+}
+
+.mySkills {
+    box-sizing: border-box;
+    margin-bottom: 5vh;
+}
+
+#skill-div {
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+#skill-div>p{
+    font-size: 2em;
+    padding-bottom: 0px;
+    margin:35px 0px 5px 10px;
+}
+
+#skill-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.mySkills * {
+    box-sizing: border-box;
+    border-radius: 2em;
+}
+
+.skill-container {
+    width: 100%; 
+    background-color: #ddd;
+}
+  
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.java {width: var(--perPro); background-color: var(--proficient);}
+.python {width: var(--perInter); background-color: var(--intermediate);}
+.js {width: var(--perFair); background-color: var(--fair);}
+.css {width: var(--perFair); background-color: var(--fair);}
+.html {width: var(--perFair); background-color: var(--fair);}
