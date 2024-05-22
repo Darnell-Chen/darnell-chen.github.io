@@ -4,6 +4,12 @@
   --baseColor3: #deffef;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 @keyframes fadeOutAnimation {
   /* set this to opacity 0 with css once its over */
   80% {

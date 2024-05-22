@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%; /* Ensure the body and html take up the full height */
+    display: grid;
+}
+
+section {
+    background-color: rgb(150, 206, 255);
+}
+
+.WIP {
+    font-size: 30px;
+    margin: 1px;
+    line-height: 45vh;
+    text-align: center;
+    height: 85vh;
+    width: 100vw;
+}

@@ -29,17 +29,15 @@ function navPage(currPage) {
         }
     }
 
-    let resume = document.getElementById("navResume");
-    resume.addEventListener("click", goResume);
+    let photos = document.getElementById("navPhotos");
+    photos.addEventListener("click", goPhotos);
 
-    function goResume() {
-        if (currPage !== "resume.html") {
+    function goPhotos() {
+        if (currPage !== "photos.html") {
             divAnimation();
 
-            console.log("wtf");
-
             setTimeout(() => {
-                window.location.href = "resume.html";
+                window.location.href = "photos.html";
             }, 500);
         }
     }
@@ -65,8 +63,6 @@ function divAnimation() {
 
 function markCurrPage(currPage) {
 
-    const colorGrad = "linear-gradient(transparent, #c9fdff)";
-
     switch(currPage) {
         case "index.html":
             document.getElementById("navHome").innerHTML = "&#12298 Home &#12299";
@@ -76,9 +72,9 @@ function markCurrPage(currPage) {
             document.getElementById("navProjects").innerHTML = "&#12298 Projects &#12299";
             document.getElementById("navProjects").style.fontWeight = "bold";
             break;
-        case "resume.html":
-            document.getElementById("navResume").innerHTML = "&#12298 Resume &#12299";
-            document.getElementById("navResume").style.fontWeight = "bold";
+        case "photos.html":
+            document.getElementById("navPhotos").innerHTML = "&#12298 Photos &#12299";
+            document.getElementById("navPhotos").style.fontWeight = "bold";
             break;
     }
 }

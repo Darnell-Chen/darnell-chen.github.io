@@ -7,7 +7,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     background-color: var(--baseColor);
-    position:fixed;
+    position:relative;
     bottom:0;
 }
 
