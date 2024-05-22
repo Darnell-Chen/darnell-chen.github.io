@@ -73,11 +73,11 @@ function markCurrPage(currPage) {
             document.getElementById("navHome").style.fontWeight = "bold";
             break;
         case "projects.html":
-            document.getElementById("navProjects").innerHTML = "&#12298 Home &#12299";
+            document.getElementById("navProjects").innerHTML = "&#12298 Projects &#12299";
             document.getElementById("navProjects").style.fontWeight = "bold";
             break;
         case "resume.html":
-            document.getElementById("navResume").innerHTML = "&#12298 Home &#12299";
+            document.getElementById("navResume").innerHTML = "&#12298 Resume &#12299";
             document.getElementById("navResume").style.fontWeight = "bold";
             break;
     }
