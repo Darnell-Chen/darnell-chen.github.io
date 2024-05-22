@@ -51,31 +51,29 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    float: right;
 }
 
 nav li{
     display: inline-block;
-    overflow: hidden;
+    justify-content: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    padding: 15px;
+    padding: 1.5vh;
     margin: 0;
     display: block;
-    width: 100%;
     min-width: 10vh;
     text-align: center;
+    justify-content: center;
 }
 
 nav a:hover{
-    transition: transform 0.3s ease;
     font-weight: bold;
     color: #fffff1;
-    transform: translateY(5px);
+    background: linear-gradient(transparent, var(--logoColor2));
 }
 
 #alt-intro {

@@ -1,5 +1,7 @@
 function navPage(currPage) {
 
+    markCurrPage(currPage);
+
     let index = document.getElementById("navHome");
     index.addEventListener("click", goIndex);
 
@@ -18,17 +20,29 @@ function navPage(currPage) {
     projects.addEventListener("click", goProjects);
 
     function goProjects() {
-        console.log("hello world");
         if (currPage !== "projects.html") {
             divAnimation();
 
             setTimeout(() => {
                 window.location.href = "projects.html";
-            }, 1000);
+            }, 500);
         }
     }
 
     let resume = document.getElementById("navResume");
+    resume.addEventListener("click", goResume);
+
+    function goResume() {
+        if (currPage !== "resume.html") {
+            divAnimation();
+
+            console.log("wtf");
+
+            setTimeout(() => {
+                window.location.href = "resume.html";
+            }, 500);
+        }
+    }
 }
 
 function divAnimation() {
@@ -36,7 +50,7 @@ function divAnimation() {
 
     var div = document.createElement("div");
     div.style.width = "100vw";
-    div.style.height = "100vh";
+    div.style.height = "150vh";
     div.style.backgroundColor = BASECOLOR;
     div.style.position = "fixed";
     div.style.transform = "translateY(100vh)";
@@ -47,4 +61,24 @@ function divAnimation() {
         div.style.transition = "transform 0.5s ease-in-out 0s";
         div.style.transform = "translateY(-100vh)";
     });
+}
+
+function markCurrPage(currPage) {
+
+    const colorGrad = "linear-gradient(transparent, #c9fdff)";
+
+    switch(currPage) {
+        case "index.html":
+            document.getElementById("navHome").innerHTML = "&#12298 Home &#12299";
+            document.getElementById("navHome").style.fontWeight = "bold";
+            break;
+        case "projects.html":
+            document.getElementById("navProjects").innerHTML = "&#12298 Home &#12299";
+            document.getElementById("navProjects").style.fontWeight = "bold";
+            break;
+        case "resume.html":
+            document.getElementById("navResume").innerHTML = "&#12298 Home &#12299";
+            document.getElementById("navResume").style.fontWeight = "bold";
+            break;
+    }
 }
