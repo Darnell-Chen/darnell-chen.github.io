@@ -11,6 +11,8 @@
     --perFair: 40%;
 
     --initialPercent: 0%;
+
+    --barDelay: .8s;
 }
 
 .mySkills {
@@ -45,8 +47,18 @@
 }
 
 .skill-container {
-    width: 100%; 
-    background-color: #eee;
+    width: 0%; 
+    background-color: #fff;
+}
+
+.skill-container.backAnim {
+    animation: backBarAnim 1.8s ease-out forwards;
+}
+
+@keyframes backBarAnim {
+    to {
+        width: 100%;
+    }
 }
   
 .skills {
@@ -54,6 +66,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
+    padding-left: 0px;
     color: white;
     font-size: 1.5em;
 }
@@ -71,24 +84,30 @@
 
 
 /* Attaches the animation to grow to final percentage */
+ 
 
-#skill-div.skillAnim .java {
+.skillAnim.java{
+    animation-delay: var(--barDelay);
     animation: proficientAnim 2s ease-in-out forwards;
 }
 
-#skill-div.skillAnim .python {
+.skillAnim.python {
+    animation-delay: var(--barDelay);
     animation: intermediateAnim 2s ease-in-out forwards;
 }
 
-#skill-div.skillAnim .js {
+.skillAnim.js {
+    animation-delay: var(--barDelay);
     animation: fairAnim 2s ease-in-out forwards;
 }
 
-#skill-div.skillAnim .css {
+.skillAnim.css {
+    animation-delay: var(--barDelay);
     animation: fairAnim 2s ease-in-out forwards;
 }
 
-#skill-div.skillAnim .html {
+.skillAnim.html {
+    animation-delay: var(--barDelay);
     animation: fairAnim 2s ease-in-out forwards;
 }
 

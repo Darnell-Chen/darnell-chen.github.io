@@ -1,7 +1,10 @@
 function navPage(currPage) {
 
+    // this part simply adds brackets and boldens the nav item we're currently on
     markCurrPage(currPage);
 
+
+    // these will create the anims that slides the divs up
     let index = document.getElementById("navHome");
     index.addEventListener("click", goIndex);
 
@@ -48,16 +51,22 @@ function divAnimation() {
 
     var div = document.createElement("div");
     div.style.width = "100vw";
+
+    // better safe than sorry w/ height
     div.style.height = "150vh";
     div.style.backgroundColor = BASECOLOR;
     div.style.position = "fixed";
+    div.style.top = "0";
     div.style.transform = "translateY(100vh)";
     
-    document.body.append(div);
-    
+    document.body.appendChild(div);
+
+
     window.requestAnimationFrame(() => {
-        div.style.transition = "transform 0.5s ease-in-out 0s";
-        div.style.transform = "translateY(-100vh)";
+        // Apply the transition style
+        div.style.transition = "transform 0.5s ease-in-out";
+
+        div.style.transform = "translateY(0)";
     });
 }
 
