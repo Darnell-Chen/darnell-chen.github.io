@@ -15,7 +15,7 @@ function navPage(currPage) {
             
             setTimeout(() => {
                 window.location.href = "index.html";
-            }, 500);
+            }, 550);
         }
     }
 
@@ -28,7 +28,7 @@ function navPage(currPage) {
 
             setTimeout(() => {
                 window.location.href = "projects.html";
-            }, 500);
+            }, 550);
         }
     }
 
@@ -65,10 +65,15 @@ function divAnimation() {
     window.requestAnimationFrame(() => {
         // Apply the transition style
         div.style.transition = "all 0.5s ease-in-out";
-        div.style.transform = "translateY(100px)";
+
+        div.style.transform = "translateY(0)";
     });
 
-    div.parentNode.removeChild(div);
+    const removeDiv = setTimeout(deleteDiv, 500);
+
+    function deleteDiv() {
+        div.parentNode.removeChild(div);
+    }
 }
 
 function markCurrPage(currPage) {
