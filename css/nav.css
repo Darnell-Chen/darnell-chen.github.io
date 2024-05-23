@@ -29,6 +29,7 @@ body {
 }
 
 .nav_bar {
+    z-index: 200;
     background-color: var(--baseColor);
     box-sizing: border-box;
     width: 100vw;
@@ -84,7 +85,7 @@ nav a:hover{
     height: 100vh;
     width: 100vw;
     background-color: var(--baseColor);
-    z-index: 200;
+    z-index: 1200;
     display: grid;
     place-content: center;
     animation: moveIntro 0.7s ease-in-out forwards;
