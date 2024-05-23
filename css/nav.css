@@ -7,11 +7,12 @@
 * {
     color: aliceblue;
     font-family: monospace;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--baseColor);
-    margin: 0;
+    margin: 6vh 0 0 0;
 }
 
 .nav_logo {
@@ -28,6 +29,10 @@ body {
 }
 
 .nav_bar {
+    background-color: var(--baseColor);
+    box-sizing: border-box;
+    width: 100vw;
+    position: fixed;
     display: flex;
     overflow: hidden;
     margin: 0;

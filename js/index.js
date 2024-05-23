@@ -41,12 +41,12 @@ function commenceIntro(){
     setTimeout(() => {
         var introScreens = introContainer.children;
 
-        let seconds = .35;
+        let seconds = .25;
 
         for (var i = 0; i < introScreens.length; i++) {
             introScreens[i].style.transition = `transform ${seconds}s ease-in 0s`;
             introScreens[i].style.transform = "translateY(100vh)";
-            seconds += .05;
+            seconds += .025;
         }
     }, 100);
 }

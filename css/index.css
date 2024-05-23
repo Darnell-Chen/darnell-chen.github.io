@@ -183,7 +183,7 @@ html, body {
 .first-section {
   display: flex;
   margin: 0px;
-  height: 90vh;
+  height: 95vh;
   overflow: hidden;
   background-color: var(--baseColor2);
   width: 100vw;
@@ -203,7 +203,7 @@ html, body {
 
 .myImage img{
   float:right;
-  height: 90vh;
+  height: 95vh;
   padding-right: 0px;
 }
 

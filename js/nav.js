@@ -64,9 +64,9 @@ function divAnimation() {
 
     window.requestAnimationFrame(() => {
         // Apply the transition style
-        div.style.transition = "transform 0.5s ease-in-out";
+        div.style.transition = "all 0.5s ease-in-out";
 
-        div.style.transform = "translateY(0)";
+        div.style.transform = "translateY(100px)";
     });
 }
 
