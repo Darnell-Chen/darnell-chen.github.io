@@ -12,6 +12,7 @@
         <script src="js/nav.js"></script>
         <script src="js/index/introAnim.js"></script>
         <script src="js/index/skills.js"></script>
+        <script src="js/index/popPolaroid.js"></script>
     </head>
     <body onload="moveIntroScreen(); navPage('index.html'); skillAnim()">
 
@@ -47,7 +48,7 @@
         <!------------------------------------------------------ First Section / About Me ------------------------------------------------------->
 
 
-        <section class="first-section">
+        <section id="first-section" class="first-section">
             <div id="about-me-div">
                 <p class="about-me">Hi. My name's</p>
                 <p id="my-name">Darnell Chen</p>
@@ -72,7 +73,7 @@
                 </div>
             </div>
             <div class="myImage">
-                <div class="polaroid-div">
+                <div id="polaroid-div" class="polaroid-div">
                     <img src="images/myPics/mainPicture.jpg">
                 </div>
             </div>

@@ -39,13 +39,36 @@ html, body {
   background-color: beige;
   padding: 15px 15px 100px 15px;
   box-shadow: 0px 5px 25px #16161679;
-  animation: floatingAnim 1.5s ease-in-out infinite;
+  /* animation: floatingAnim 1.5s ease-in-out infinite; */
+  transform: translateY(100vh);
 }
 
 .myImage img{
   background-color: beige;
   width: 20vw;
   margin: 0px;
+}
+
+.leaveIntersectionAnim {
+  animation: disappearAnim 2s ease-in-out forwards;
+}
+
+@keyframes disappearAnim {
+  /* for some reason, this works because of the conflict w/ floatingAnim */
+  0% {
+    transform: translateY(0vh);
+  }
+}
+
+.intersectionAnim {
+  animation: floatingAnim 1.5s ease-in-out infinite, appearAnim 2s ease-in-out;
+}
+
+@keyframes appearAnim {
+  /* for some reason, this works because of the conflict w/ floatingAnim */
+  0% {
+    transform: translateY(100vh);
+  }
 }
 
 @keyframes floatingAnim {

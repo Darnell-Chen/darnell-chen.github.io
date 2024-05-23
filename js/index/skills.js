@@ -22,5 +22,4 @@ function skillAnim(){
         observer.observe(currSkill);
     }
 
-    console.log(animElements);
 }
