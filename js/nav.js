@@ -69,7 +69,7 @@ function divAnimation() {
         div.style.transform = "translateY(0)";
     });
 
-    const removeDiv = setTimeout(deleteDiv, 500);
+    const removeDiv = setTimeout(deleteDiv, 550);
 
     function deleteDiv() {
         div.parentNode.removeChild(div);
