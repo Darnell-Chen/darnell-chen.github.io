@@ -5,6 +5,8 @@ function navPage(currPage) {
         document.getElementById("transitionDiv").remove;
     }
 
+    deleteTransitionDiv;
+
     // this part simply adds brackets and boldens the nav item we're currently on
     markCurrPage(currPage);
 
