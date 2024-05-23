@@ -2,7 +2,7 @@ function navPage(currPage) {
 
     const deleteTransitionDiv = () => {
         console.log("transitionDivDeleted");
-        document.getElementById("transitionDiv").remove;
+        document.getElementById("transitionDiv").remove();
     }
 
     deleteTransitionDiv;
@@ -77,12 +77,6 @@ function divAnimation() {
 
         div.style.transform = "translateY(0)";
     });
-
-    // const removeDiv = setTimeout(deleteDiv, 660);
-
-    // function deleteDiv() {
-    //     div.parentNode.removeChild(div);
-    // }
 }
 
 function markCurrPage(currPage) {
