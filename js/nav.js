@@ -1,5 +1,10 @@
 function navPage(currPage) {
 
+    const deleteTransitionDiv = () => {
+        console.log("transitionDivDeleted");
+        document.getElementById("transitionDiv").remove;
+    }
+
     // this part simply adds brackets and boldens the nav item we're currently on
     markCurrPage(currPage);
 
@@ -57,6 +62,8 @@ function divAnimation() {
     div.style.backgroundColor = BASECOLOR;
     div.style.position = "fixed";
     div.style.top = "0";
+    div.style.zIndex = "1000"
+    div.setAttribute("id", "transitionDiv")
     div.style.transform = "translateY(100vh)";
     
     document.body.appendChild(div);
@@ -69,11 +76,11 @@ function divAnimation() {
         div.style.transform = "translateY(0)";
     });
 
-    const removeDiv = setTimeout(deleteDiv, 550);
+    // const removeDiv = setTimeout(deleteDiv, 660);
 
-    function deleteDiv() {
-        div.parentNode.removeChild(div);
-    }
+    // function deleteDiv() {
+    //     div.parentNode.removeChild(div);
+    // }
 }
 
 function markCurrPage(currPage) {

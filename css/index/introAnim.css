@@ -22,7 +22,7 @@
     height: 100dvh;
     width: 100dvw;
     background-color: var(--baseColor);
-    z-index: 200;
+    z-index: 1000;
     display: grid;
     place-content: center;
   }
@@ -46,13 +46,13 @@
     position: relative;
     grid-area: overlap;
     letter-spacing: 10px;
-    z-index: 202;
+    z-index: 1002;
     animation: removeblinking step-end forwards;
     animation-delay: 7s;
   }
   
   .intro-p2 {
-    z-index: 201;
+    z-index: 1001;
   }
   
   .intro-p::before, 
@@ -84,7 +84,7 @@
   }
   
   .intro-p3 {
-    z-index: 201;
+    z-index: 1001;
     position: absolute;
     top: 1.5em;
   
