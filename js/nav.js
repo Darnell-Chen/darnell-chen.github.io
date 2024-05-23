@@ -41,7 +41,7 @@ function navPage(currPage) {
 
             setTimeout(() => {
                 window.location.href = "photos.html";
-            }, 500);
+            }, 550);
         }
     }
 }
@@ -65,9 +65,10 @@ function divAnimation() {
     window.requestAnimationFrame(() => {
         // Apply the transition style
         div.style.transition = "all 0.5s ease-in-out";
-
         div.style.transform = "translateY(100px)";
     });
+
+    div.parentNode.removeChild(div);
 }
 
 function markCurrPage(currPage) {
