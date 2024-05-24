@@ -1,0 +1,31 @@
+#draggableDiv {
+    position: absolute;
+    z-index: 250;
+    text-align: center;
+    transform: translateY(70vh) translateX(20vw);
+}
+
+#draggableDivHeader {
+    position: relative;
+}
+
+#draggableDiv img{
+    text-align: center;
+    height: 90%;
+    cursor: move;
+    margin: 10px;
+    position: absolute;
+    top: 0%;
+    right: 25%;
+}
+
+svg{
+    margin: 0 auto;
+    width:63%;
+    height:auto;
+    position: relative;
+}
+
+body {
+    overflow: hidden;
+}

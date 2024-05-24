@@ -79,13 +79,14 @@ nav a:hover{
     background: linear-gradient(transparent, var(--logoColor2));
 }
 
+
 #alt-intro {
     opacity: 1;
     position: fixed;
     height: 100vh;
     width: 100vw;
     background-color: var(--baseColor);
-    z-index: 200;
+    z-index: 300;
     display: grid;
     place-content: center;
     animation: moveIntro 0.7s ease-in-out forwards;
