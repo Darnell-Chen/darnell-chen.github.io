@@ -5,18 +5,32 @@
     transform: translateY(70vh) translateX(20vw);
 }
 
+@keyframes shifting {
+    50% {
+        transform: translateX(10px) translateY(5px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
 #draggableDivHeader {
     position: relative;
+    animation: shifting 5s ease-in-out infinite;
 }
 
 #draggableDiv img{
     text-align: center;
     height: 90%;
-    cursor: move;
+    cursor: grab;
     margin: 10px;
     position: absolute;
     top: 0%;
     right: 25%;
+}
+
+#draggableDiv img:active{
+    cursor: grabbing;
 }
 
 svg{
