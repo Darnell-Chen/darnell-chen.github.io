@@ -4,6 +4,10 @@
   --baseColor: #87b9ff;
   --baseColor2: #c9ffe8;
   --baseColor3: #deffef;
+
+  --buttonColorInitial: #87b9ff;
+  --buttonColorClicked: #2f64a8;
+  --buttonColorHover: #a5cafa;
 }
 
 html, body {
@@ -27,6 +31,8 @@ html, body {
   margin: 0px;
 }
 
+/*************************** Polaroid Image **********************************/
+
 .myImage {
   max-width: fit-content;
   margin-right: 15vw;
@@ -36,7 +42,9 @@ html, body {
 }
 
 .polaroid-div {
-  background-color: beige;
+  background: linear-gradient(217deg, rgba(255, 210, 210, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(181, 252, 181, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(199, 199, 255, 0.8), rgba(0,0,255,0) 70.71%);
   padding: 15px 15px 10px 15px;
   box-shadow: 0px 5px 25px #16161679;
   /* animation: floatingAnim 1.5s ease-in-out infinite; */
@@ -44,13 +52,12 @@ html, body {
 }
 
 .myImage img{
-  background-color: beige;
   width: 20vw;
   margin: 0px;
 }
 
 .myImage p{
-  color: black;
+  color: rgb(242, 255, 235);
   font-family: 'Cedarville Cursive', cursive;
   font-size: 30px;
   text-align: right;
@@ -144,4 +151,43 @@ html, body {
 #about-me-div {
   align-content: center;
   margin: 20vh
+}
+
+
+
+
+/******************* Linkedin and Resume Buttons ************************/
+
+.buttonsDiv {
+  display: flex;
+  width: 20vw;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.buttonsDiv button{
+  flex: 1;
+  color: var(--baseColor3);
+  font-size: 20px;
+  background: var(--buttonColorInitial);
+  padding: 5px 10px 5px 10px;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.buttonsDiv button:hover{
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--buttonColorHover);
+}
+
+.buttonsDiv button:focus {
+  animation: focusButton 0.2s ease-in-out
+}
+
+@keyframes focusButton {
+  to {
+    transform: scale(1.1);
+    background-color: var(--buttonColorClicked);
+  }
 }
