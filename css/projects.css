@@ -7,7 +7,7 @@
     background-image: radial-gradient(black 1px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
-    height: 85vh;
+    height: 90vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -36,17 +36,17 @@
 
 @keyframes bobbingAnim {
     0% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, 30px);
         animation-timing-function:ease-in-out
     }
   
     50% {
-        transform: translate(0px, 0px);
+        transform: translate(0px, 20px);
         animation-timing-function:ease-in-out
     }
   
     100% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, 30px);
         animation-timing-function:ease-in-out
     }
   }
