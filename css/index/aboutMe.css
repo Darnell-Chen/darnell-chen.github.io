@@ -10,6 +10,19 @@
   --buttonColorHover: #a5cafa;
 }
 
+@media screen and (max-width: 768px) {
+  .first-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .myImage,
+  #about-me-div {
+    margin-left: 10vw;
+    max-width: 100%; /* Make elements take full width on smaller screens */
+    margin-right: 0; /* Remove margin between elements on smaller screens */
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -21,6 +34,7 @@ html, body {
   display: flex;
   margin: 0px;
   height: 85vh;
+  flex-wrap: wrap;
   background-color: var(--baseColor);
   width: 100vw;
   justify-content: space-between;
@@ -36,6 +50,7 @@ html, body {
 .myImage {
   max-width: fit-content;
   margin-right: 15vw;
+  flex: 1;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -47,14 +62,14 @@ html, body {
   background: linear-gradient(217deg, rgba(255, 210, 210, 0.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(181, 252, 181, 0.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(199, 199, 255, 0.8), rgba(0,0,255,0) 70.71%);
-  padding: 15px 15px 10px 15px;
+  padding: 5% 5% 5% 5%;
   box-shadow: 0px 5px 25px #16161679;
   /* animation: floatingAnim 1.5s ease-in-out infinite; */
   transform: translateY(100vh);
 }
 
 .myImage img{
-  width: 20vw;
+  height: 50vh;
   margin: 0px;
 }
 
@@ -107,15 +122,6 @@ html, body {
   }
 }
 
-#my-name {
-  font-size: 50px;
-  color: 	var(--baseColor2);
-  justify-content: left;
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0px;
-}
-
 @keyframes bobbingAnim {
   0% {
       transform: translate(0px, -5px);
@@ -133,13 +139,22 @@ html, body {
   }
 }
 
+/********** Left Side of About Me***********/
 .about-me:first-child {
-  font-size: 30px;
+  font-size: 2vw;
+}
+
+#my-name {
+  font-size: 3vw;
+  color: 	var(--baseColor2);
+  justify-content: left;
+  font-weight: bold;
+  margin: 0px;
 }
 
 .about-me {
-  text-wrap: nowrap;
-  font-size: 27px;
+  text-wrap: normal;
+  font-size: 2vw;
   color: 	var(--baseColor3);
   font-weight: bold;
 }
@@ -152,7 +167,10 @@ html, body {
 
 #about-me-div {
   align-content: center;
-  margin: 20vh
+  margin: 10vw;
+  flex: 1;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 
