@@ -1,0 +1,47 @@
+:root {
+    --baseColor: #87b9ff;
+
+    --footerbaseColor2: #98d1ff;
+}
+
+#Contact-Me {
+    background-color: var(--baseColor);
+    padding: 5vh 0px 8vh 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(to bottom, var(--baseColor), var(--footerbaseColor2), var(--baseColor))
+}
+
+#Contact-Div h1{
+    font-size: 3rem;
+    margin: 0px 0px 25px 0px;
+    padding: 0px;
+}
+
+#Contact-Div p{
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 5px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+    margin-top: 20px; /* Add some spacing if needed */
+}
+
+.socials-container {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between icons if needed */
+    height: 2rem;
+}
+  
+.socials-logo {
+    max-width:100%;
+    max-height:100%;
+    object-fit:cover;
+    flex-shrink: 1;
+}

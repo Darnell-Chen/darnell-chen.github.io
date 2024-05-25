@@ -1,0 +1,36 @@
+:root {
+    --baseColor: #87b9ff;
+    --baseColor2: #c9ffe8;
+    --baseColor3: #deffef;
+  }
+
+.spacer {
+    margin: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+
+}
+
+.spacer.spacer1 {
+    position: absolute;
+    /* Not sure where - but I somehow created a 25px margin or padding gap somwewhere in first section */
+    /* Made it 27 to accodomate polaroid img */
+    bottom: -35px;
+}
+
+.spacer.spacer2 {
+    position: relative;
+    /* Not sure where - but I somehow created a 25px margin or padding gap somwewhere in first section */
+    /* Made it 27 to accodomate polaroid img */
+    top: 100%;
+}
+
+.spacer img {
+    margin: 0;
+    padding: 0;
+}

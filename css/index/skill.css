@@ -1,9 +1,16 @@
 
 :root {
+    --titleColor: #a9befa;
+    --textColor: rgb(239, 246, 255);
+
+    --baseColor1: #87b9ff;
+    --baseColor2: #c9ffe8;
+    --color3: #f1ffca;
+
     /* Proficiency Colors */
-    --proficient: #00ffa2;
-    --intermediate: #6effca;
-    --fair: #b5ffe4;
+    --proficient: #87b9ff;
+    --intermediate: #a7ccff;
+    --fair: #cbe1ff;
 
     /* Proficiency Percentages} */
     --perPro: 80%;
@@ -17,7 +24,9 @@
 
 .mySkills {
     box-sizing: border-box;
-    margin-bottom: 5vh;
+    background: linear-gradient(to bottom, var(--baseColor2), var(--baseColor1));
+    color: var(--baseColor1);
+    padding-bottom: 0;
 }
 
 #skill-div {
@@ -32,13 +41,21 @@
     font-size: 2em;
     padding-bottom: 0px;
     margin:35px 0px 5px 10px;
+    color: var(--textColor);
+    font-weight: bold;
 }
 
 #skill-title {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 0px;
+}
+
+#skill-title h1{
+    margin: 0px;
+    padding-top: 20px;
+    color: var(--titleColor);
 }
 
 .mySkills * {
