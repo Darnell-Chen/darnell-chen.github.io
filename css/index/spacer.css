@@ -14,16 +14,21 @@
     margin: 0;
     padding: 0;
 
+    /** Kind of ridiculous - but this removes small gaps between sections**/
+    font-size: 0;
 }
 
+
 .spacer.spacer1 {
-    position: absolute;
+    z-index: 110;
+    background-color: transparent;
+    position: relative;
     /* Not sure where - but I somehow created a 25px margin or padding gap somwewhere in first section */
     /* Made it 27 to accodomate polaroid img */
-    bottom: -35px;
 }
 
 .spacer.spacer2 {
+    background-color: #87b9ff;
     position: relative;
     /* Not sure where - but I somehow created a 25px margin or padding gap somwewhere in first section */
     /* Made it 27 to accodomate polaroid img */

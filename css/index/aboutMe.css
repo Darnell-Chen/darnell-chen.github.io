@@ -19,8 +19,7 @@ html, body {
 .first-section {
   display: flex;
   margin: 0px;
-  height: 100vh;
-  overflow: hidden;
+  height: 85vh;
   background-color: var(--baseColor);
   width: 100vw;
   justify-content: space-between;
@@ -42,6 +41,8 @@ html, body {
 }
 
 .polaroid-div {
+  overflow: visible;
+  z-index: 101;
   background: linear-gradient(217deg, rgba(255, 210, 210, 0.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(181, 252, 181, 0.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(199, 199, 255, 0.8), rgba(0,0,255,0) 70.71%);

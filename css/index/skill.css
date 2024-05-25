@@ -23,6 +23,8 @@
 }
 
 .mySkills {
+    position: relative;
+    z-index: 110;
     box-sizing: border-box;
     background: linear-gradient(to bottom, var(--baseColor2), var(--baseColor1));
     color: var(--baseColor1);
