@@ -6,8 +6,12 @@ html, body {
     display: grid;
 }
 
-section {
-    background-color: rgb(150, 206, 255);
+#photoSection {
+    background-color: transparent;
+}
+
+section img{
+    width: 100%;
 }
 
 .WIP {

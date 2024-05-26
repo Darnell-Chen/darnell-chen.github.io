@@ -5,12 +5,10 @@ $(document).ready(function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                console.log("intersecting");
                 let myDiv = entry.target.querySelector("#polaroidPadding");
                 myDiv.classList.add("intersectionAnim");
                 myDiv.classList.remove("leaveIntersectionAnim");
             } else {
-                console.log("not intersecting");
                 let myDiv = entry.target.querySelector("#polaroidPadding");
                 myDiv.classList.add("leaveIntersectionAnim");
                 myDiv.classList.remove("intersectionAnim");
