@@ -11,74 +11,43 @@
 }
 
 body {
-    background-color: var(--baseColor);
     margin: 0;
+    background-color: #87b9ff;
 }
 
-.nav_logo {
-    font-size: 20px;
-    text-decoration: none;
-    margin-left: 18vh;
-    font-weight: bold;
-    color: var(--logoColor1);
-}
-
-.logo-span {
-    /* color: rgb(255, 252, 205); */
-    color: var(--logoColor2);
-}
-
-.nav_bar {
-    z-index: 200;
-    background-color: var(--baseColor);
-    box-sizing: border-box;
-    width: 100vw;
+#navSection {
+    z-index: 250;
     position: fixed;
-    display: flex;
-    overflow: hidden;
-    margin: 0;
-    padding-right: 10%;
-    padding-left: 2%;
-    padding-top: 10px;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    left: 0;
-}
-
-nav p {
-    float: left;
-}
-
-nav ul {
-    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-nav li{
-    display: inline-block;
-    justify-content: center;
+#myNav {
+    background: var(--baseColor);
+    padding: 0px 5vw 0px 5vw;
 }
 
-nav a {
+#myNav a{
     color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 1.5vh;
-    margin: 0;
-    display: block;
-    min-width: 10vh;
-    text-align: center;
-    justify-content: center;
+    padding: 20px 20px 20px 20px;
+    font-size: 2.2vh;
 }
 
-nav a:hover{
+#myNav li:hover {
+    background: linear-gradient(to bottom, var(--baseColor),var(--logoColor1));
+}
+
+#myLogo {
     font-weight: bold;
-    color: #fffff1;
-    background: linear-gradient(transparent, var(--logoColor2));
+    margin: 0px;
 }
 
+#logoBegin {
+    color: var(--logoColor1);
+    margin: 0px;
+    padding: 0px;
+}
+
+/***************** The Sliding Div Intro ******************/
 
 #alt-intro {
     opacity: 1;
@@ -90,10 +59,10 @@ nav a:hover{
     display: grid;
     place-content: center;
     animation: moveIntro 0.7s ease-in-out forwards;
-  }
+}
 
-  @keyframes moveIntro {
+ @keyframes moveIntro {
     to {
         transform: translateY(100vh);
     }
-  }
+}

@@ -30,6 +30,7 @@ function commenceIntro(){
         div.style.backgroundColor = colors[i];
         div.style.position = "fixed";
         div.style.transform = "translateY(0)";
+        div.style.margin = "0px;"
 
         let currZIndex = myZ - i;
         div.style.zIndex = currZIndex;

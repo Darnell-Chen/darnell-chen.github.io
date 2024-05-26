@@ -38,4 +38,22 @@
 .spacer img {
     margin: 0;
     padding: 0;
+    animation: floatingAnim 2s ease-in-out infinite;
+}
+
+@keyframes floatingAnim {
+    0% {
+        transform: translate(0, 10px);
+        animation-timing-function:ease-in-out
+    }
+
+    50% {
+        transform: translate(0, 0px);
+        animation-timing-function:ease-in-out
+    }
+
+    100% {
+        transform: translate(0, 10px);
+        animation-timing-function:ease-in-out
+    }
 }

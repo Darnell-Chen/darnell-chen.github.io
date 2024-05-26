@@ -3,11 +3,15 @@
 <head>
     <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/draggable.css">
-    <script src="js/jQuery.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/projects/projects.js"></script>
     <script src="js/draggable.js"></script>
@@ -35,16 +39,31 @@
         </div>
     </div>
 
-    <header class="nav_bar">
-        <a class="nav_logo" href="/">@ <span class="logo-span">d a r n e l l _ c h e n</span></a>
-        <nav>
-            <ul>
-                <li><a id="navHome" href="#">  Home  </a></li>
-                <li><a id="navProjects" href="#">  Projects  </a></li>
-                <li><a id="navPhotos" href="#">  Photos  </a></li>
-            </ul>
-        </nav>
-    </header>
+    <section id="navSection" class="container-fluid">
+        <nav id="myNav" class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="#">
+                <span id="myLogo">
+                    <span id="logoBegin">@</span>
+                    Darnell_Chen</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myPages">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="myPages">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a id="navHome" class="nav-link" href="#">&emsp; Home &emsp;</a>
+                </li>
+                <li class="nav-item">
+                  <a id="navProjects" class="nav-link" href="#">&emsp; Projects &emsp;</a>
+                </li>
+                <li class="nav-item">
+                  <a id="navPhotos" class="nav-link" href="#">&emsp; Photos &emsp;</a>
+                </li>
+            </div>
+          </nav>
+    </section>
 
     <div id="project-section">
         <a href="https://github.com/Darnell-Chen/shoppd" class="projects">

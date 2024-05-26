@@ -1,7 +1,6 @@
 function navPage(currPage) {
 
     const deleteTransitionDiv = () => {
-        console.log("transitionDivDeleted");
         document.getElementById("transitionDiv").remove();
     }
 
@@ -9,7 +8,6 @@ function navPage(currPage) {
 
     // this part simply adds brackets and boldens the nav item we're currently on
     markCurrPage(currPage);
-
 
     // these will create the anims that slides the divs up
     let index = document.getElementById("navHome");
@@ -26,7 +24,9 @@ function navPage(currPage) {
         }
     }
 
+
     let projects = document.getElementById("navProjects");
+
     projects.addEventListener("click", goProjects);
 
     function goProjects() {

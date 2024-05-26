@@ -1,2 +1,4 @@
 z-Index of Polaroid is 101
-z- Index of Skills and spacer1 is 110
+z-Index of Skills and spacer1 is 110
+
+z-Index of navbar is 250

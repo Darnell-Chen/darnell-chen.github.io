@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    background: linear-gradient(to bottom, var(--baseColor), var(--footerbaseColor2), var(--baseColor))
+    background: linear-gradient(to bottom, var(--baseColor), #5c8aca);
 }
 
 #Contact-Div h1{
@@ -21,7 +21,7 @@
 }
 
 #Contact-Div p{
-    font-size: 1.5rem;
+    font-size: 2vh;
     padding: 0px;
     margin: 5px;
 }

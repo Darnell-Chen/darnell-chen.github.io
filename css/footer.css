@@ -3,6 +3,7 @@
 }
 
 footer {
+    color: white;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -21,11 +22,13 @@ footer {
 
 #footer-div p {
     margin: 0px;
+    color: white;
     padding: 5px 0px 5px 0px;
 }
 
 
 footer a{
+    color: white;
     text-decoration: none;
 }
 

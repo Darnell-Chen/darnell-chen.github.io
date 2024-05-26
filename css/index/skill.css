@@ -62,7 +62,7 @@
 
 .mySkills * {
     box-sizing: border-box;
-    /* border-radius: 2em; */
+    border-radius: 2em;
 }
 
 .skill-container {
@@ -90,7 +90,9 @@
     font-size: 1.5em;
 }
 
-
+.skillAnim {
+    border-radius: inherit;
+}
 
 
 /*     Sets initial percentage     */
