@@ -31,21 +31,17 @@
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  font-size: 3.5vw;
   font-family: monospace;
   position: relative;
   grid-area: overlap;
-  letter-spacing: 10px;
 }
   
 .intro-p {
   padding: 0;
   margin: 0;
-  font-size: 3.5vw;
   font-family: monospace;
   position: relative;
   grid-area: overlap;
-  letter-spacing: 10px;
   z-index: 1002;
   animation: removeblinking step-end forwards;
   animation-delay: 7s;
@@ -54,6 +50,41 @@
 .intro-p2 {
   z-index: 1001;
 }
+
+@media (max-width: 1000px) {
+  #intro-screen h1{
+    font-size: 1.5em;
+    letter-spacing: 0px;
+  }
+
+  .intro-p {
+    font-size: 1.5em;
+    letter-spacing: 0px;
+  }
+
+  .intro-p2 {
+    font-size: 1.5em;
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #intro-screen h1{
+    font-size: 3.5em;
+    letter-spacing: 10px;
+  }
+
+  .intro-p {
+    font-size: 3.5em;
+    letter-spacing: 10px;
+  }
+
+  .intro-p2 {
+    font-size: 3.5em;
+    letter-spacing: 10px;
+  }
+}
+
 
 .intro-p::before, 
 .intro-p::after,
@@ -90,8 +121,8 @@
 
   /* There's a weird abrupt shift before the shrinking, I could just add an animation to fade out the words to hide it, 
   then fade back in */
-  animation: fullblinking 1s ease-in-out infinite, shrink 1s ease-in-out forwards;
-  animation-delay: 12s, 12s;
+  animation: fullblinking 1s ease-in-out infinite;
+  animation-delay: 12s;
 }
 
 .intro-p3::before {
