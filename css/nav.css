@@ -17,7 +17,6 @@ body {
 
 #navSection {
     z-index: 250;
-    position: fixed;
     padding: 0;
 }
 
@@ -66,3 +65,24 @@ body {
         transform: translateY(100vh);
     }
 }
+
+/*******For Scroll Bar******/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--logoColor2);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--baseColor);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6790ce;
+  }

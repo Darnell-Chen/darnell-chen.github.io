@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/draggable.css">
     <script src="js/nav.js"></script>
-    <script src="js/projects/projects.js"></script>
+    <script type="module" src="js/projects/projects.js"></script>
+    <script type="module" src="js/projects/projectList.js"></script>
     <script src="js/draggable.js"></script>
     <script src="js/projects/sounds.js"></script>
 </head>
@@ -40,7 +41,7 @@
     </div>
 
     <section id="navSection" class="container-fluid">
-        <nav id="myNav" class="navbar navbar-expand-md navbar-dark">
+        <nav id="myNav" class="navbar fixed-top navbar-expand-md navbar-dark">
             <a class="navbar-brand" href="#">
                 <span id="myLogo">
                     <span id="logoBegin">@</span>
@@ -65,116 +66,10 @@
           </nav>
     </section>
 
-    <div id="project-section">
-        <a href="https://github.com/Darnell-Chen/shoppd" class="projects">
-            <p>
-                <span class="project-name">Shopp'd</span>
-                <br>
-                <span class="date">Apr - May 2024</span>
-                <br>
-                <span class="language">Python | JS | HTML | CSS</span>
-                <br>
-                <br>
-                
+    <div id="project-section" >
+        <div class="row gx-3 project-wrapper">
 
-                Shopp'd is a straightforward web application designed to streamline the clothes shopping experience. 
-                Users can upload images of clothing items they desire, and our platform utilizes web scraping technology to search select luxury brands for similar clothing in real-time.
-
-                <br>
-                <br>
-
-                IDE: VSCode
-                <br>
-                Framework: Flask
-                <br>
-                Libraries: PyTorch, Firebase, Beautiful Soup, etc.
-            </p>
-            <img src="images/projects/Shoppd.png">
-        </a>
-
-
-
-
-        <a href="https://github.com/Darnell-Chen/Spotify-UnWrapped" class="projects">
-            <p>
-                <span class="project-name">Spotify UnWrapped</span>
-                <br>
-                <span class="date">Mar - Apr 2024</span>
-                <br>
-                <span class="language">Java</span>
-
-                <br>
-                <br>
-
-                Spotify UnWrapped is an Android app that taps into your Spotify account to provide a personalized Spotify Wrapped summary. 
-                Unlike the traditional Spotify Wrapped, this app offers the ability of generating your Wrapped summary any time of the year. 
-                Moreover, it saves your Wrapped summary for future viewing, ensuring you can revisit it at any time.
-
-                <br>
-                <br>
-
-                IDE: Android Studio
-                <br>
-                Libraries: Firebase, Picasso, StoryViewer, etc.
-                <br>
-                Others: NoSQL, XML
-            </p>
-            <img src="images/projects/UnWrapped.jpg">
-        </a>
-
-
-
-
-        <a href="https://github.com/Darnell-Chen/Android_Scheduler_App" class="projects">
-            <p>
-                <span class="project-name">Scheduling App</span>
-                <br>
-                <span class="date">Jan - Feb 2024</span>
-                <br>
-                <span class="language">Java</span>
-
-                <br>
-                <br>
-                
-                This straightforward Android app helps users manage their school schedules with ease. 
-                It features a school-friendly format that allows students to track their assignments and tasks effectively.
-
-                <br>
-                <br>
-
-                IDE: Android Studio
-                <br>
-                Other: XML
-            </p>
-            <img src="images/projects/Schedule.jpg">
-        </a>
-
-
-
-        <a href="https://github.com/Darnell-Chen/Local_Covid_Cases" class="projects">
-            <p>
-                <span class="project-name">Covid Tracker</span>
-                <br>
-                <span class="date">Jan 2023</span>
-                <br>
-                <span class="language">Python</span>
-
-                <br>
-                <br>
-
-                This Python program utilizes data sheets from The New York Times to create visual representations of COVID cases across different counties from 2020 to 2022. 
-                It provides users with a simple yet effective tool to track and analyze COVID trends.
-
-                <br>
-                <br>
-
-                IDE: PyCharm
-                <br>
-                Libraries: Matplot
-            </p>
-            <img src="images/projects/Covid.jpg">
-        </a>
-
+        </div>
     </div>
 
     <footer>

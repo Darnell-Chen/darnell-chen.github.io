@@ -3,30 +3,69 @@
     --baseColor2: #c9ffe8;
 }
 
+body {
+    overflow-x: hidden !important;
+    position: relative;
+}
+
 #project-section {
     background-image: radial-gradient(black 1px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
-    height: 90vh;
     width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 2.5vw;
     box-sizing: border-box;
     background: linear-gradient(0turn, var(--baseColor), var(--baseColor2),  var(--baseColor2), var(--baseColor2), var(--baseColor));
-    padding: 5vw;
+    padding: 10vh 5vh 5vh 5vh;
 }
 
-.projects {
-    height: 100%;
-    width: 100%;
-    background-color: var(--baseColor);
-    border-radius: 1vw;
+.project-item {
+    height: 70vh;
+    background-color: transparent;
     overflow: hidden;
-    position: relative;
-    animation: appearAnimation 1s ease-in-out, bobbingAnim 3s ease-in-out infinite;
+    padding: 0px;
+    margin: 0vh;
+    border-radius: 2vh;
 }
+
+
+.project-item p {
+    position: relative;
+    margin: 0px;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.501);
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: black;
+    top: 81%;
+    z-index: 101;
+}
+
+.project-item:hover p{
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.836);
+    box-shadow: 10px 10px 20px black;
+}
+
+.project-item:hover {
+    box-shadow: 0px 0px 30px var(--baseColor);
+}
+
+.date {
+    float: right;
+    font-style: italic;
+}
+
+.project-image {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    z-index: 100;
+}
+
 
 @keyframes appearAnimation {
     from {
@@ -50,31 +89,6 @@
         animation-timing-function:ease-in-out
     }
   }
-
-
-.projects>img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.projects:hover p{
-    top: 0%;
-    background-color: rgba(0, 0, 0, 0.836);
-}
-
-.projects>p {
-    position: absolute;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.501);
-    top: 81%;
-    transition: all 0.5s ease-in-out;
-    box-sizing: border-box;
-    font-size: 20px;
-}
 
 .project-name {
     margin: 0px;

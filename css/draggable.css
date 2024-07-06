@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 250;
     text-align: center;
-    transform: translateY(70vh) translateX(20vw);
+    transform: translateY(15vh) translateX(30vw);
 }
 
 @keyframes shifting {
@@ -41,5 +41,5 @@ svg{
 }
 
 body {
-    overflow: hidden;
+    overflow: scroll;
 }

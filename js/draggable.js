@@ -4,6 +4,11 @@ $(document).ready(function() {
 
 function dragElement(elmnt) {
 
+  if (window.screen.width < 992) {
+    $("#draggableDiv").width(200).height(200);
+    return;
+  }
+
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "Header")) {
     // if present, the header is where you move the DIV from:
