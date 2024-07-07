@@ -8,17 +8,42 @@ html, body {
 
 #photoSection {
     background-color: transparent;
+    height: 85vh;
+    margin-top: 10vh;
+    display: flex;
 }
 
 section img{
     width: 100%;
 }
 
-.WIP {
-    font-size: 30px;
-    margin: 1px;
-    line-height: 45vh;
-    text-align: center;
-    height: 85vh;
-    width: 100vw;
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-polaroid-padding {
+    background: linear-gradient(217deg, rgba(255, 180, 180, 0.5), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(143, 255, 143, 0.5), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(255, 255, 255, 0.5), rgba(0,0,255,0) 70.71%);
+    padding: 4% 4% 1% 4%;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+.photo p {
+    font-size: 2cqh;
+}
+
+.photo-left-text {
+    color: black;
+}
+
+.photo-right-text {
+    color: black;
+    float: right;
+}
+
+.photo-text {
+    padding-top: 1.2cqh;
 }
