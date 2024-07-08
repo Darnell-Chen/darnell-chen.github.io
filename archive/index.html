@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Darnell Chen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/jQuery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/index/introAnim.css">
+        <link rel="stylesheet" href="css/index/aboutMe.css">
+        <link rel="stylesheet" href="css/index/skill.css">
+        <link rel="stylesheet" href="css/index/contactMe.css">
+        <link rel="stylesheet" href="css/index/spacer.css">
+        <script src="js/nav.js"></script>
+        <script src="js/index/introAnim.js"></script>
+        <script src="js/index/skills.js"></script>
+        <script src="js/index/popPolaroid.js"></script>
+        
+    </head>
+    <body onload="moveIntroScreen(); skillAnim(); navPage('index.html')">
+
+
+        <!------------------------------------------------------------- Intro Anim ------------------------------------------------------------->
+        <div id="intro-container">
+            <div id="intro-screen">
+                <h1 class="intro-p">hi. my name is darnell.</h1>
+                <h1 class="intro-p2">welcome to my website.</h1>
+                <h1 class="intro-p3">tap anywhere to enter</h1>
+            </div>
+        </div>
+
+
+
+        <!----------------------------------------------------------------- Nav Bar ------------------------------------------------------------>
+
+        <section id="navSection" class="container-fluid">
+            <nav id="myNav" class="navbar fixed-top navbar-expand-md navbar-dark">
+                <a class="navbar-brand" href="#">
+                    <span id="myLogo">
+                        <span id="logoBegin">@</span>
+                        Darnell_Chen</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myPages">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="myPages">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a id="navHome" class="nav-link" href="#">&emsp; Home &emsp;</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="navProjects" class="nav-link" href="#">&emsp; Projects &emsp;</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="navPhotos" class="nav-link" href="#">&emsp; Photos &emsp;</a>
+                    </li>
+                </div>
+              </nav>
+        </section>
+
+
+
+        <!------------------------------------------------------ First Section / About Me ------------------------------------------------------->
+
+
+        <section id="first-section" class="container-fluid">
+            <div id="about-me-div" class="row">
+                <div class="col-xl" id="right-column">
+                    <div class="row">
+                        <p> Hi. My name's
+                            <br>
+                            <span id="myName">Darnell Chen</span>
+                            <br>
+                            I'm a third-year student currently studying at Georgia Tech. 
+                            My interests are in AI and Web Development.
+                            Feel free to connect with me on Linkedin below.
+                        </p>
+                    </div>
+                    <div class="buttonsDiv row">
+                        <a href="https://www.linkedin.com/in/darnell-chen/"><button class="firstButtons">Linkedin</button></a>
+                        <a href="myResume.pdf" download="Darnell Chen Resume"><button class="firstButtons">Resume</button></a>
+                    </div>
+                </div>
+
+
+                <div id="myImage" class="col-sm-4">
+                    <div id="polaroidPadding">
+                        <img src="images/myPics/mainPicture.jpg">
+                        <p>Darnell Chen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer-background">
+            <div class="spacer spacer1">
+                <image src="images/svgs/svg6.svg"/>
+            </div>
+        </div>
+
+
+        <!------------------------------------------------------ Skills ------------------------------------------------------->
+
+        <section class="mySkills">
+
+            <div id="skill-title">
+                <h1>Skills</h1>
+            </div>
+
+            <div id="skill-div">
+                <p>Java</p>
+                <div class="skill-container">
+                    <div class="skills java">Proficient</div>
+                </div>
+                    
+                <p>Python</p>
+                <div class="skill-container">
+                    <div class="skills python">Intermediate</div>
+                </div>
+                    
+                <p>JavaScript</p>
+                <div class="skill-container">
+                    <div class="skills js">Fair</div>
+                </div>
+                    
+                <p>CSS</p>
+                <div class="skill-container">
+                    <div class="skills css">Fair</div>
+                </div>
+
+                <p>HTML</p>
+                <div class="skill-container">
+                    <div class="skills html">Fair</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer spacer2">
+            <image src="images/svgs/svg2.svg"/>
+        </div>
+
+
+        <!--------------------------------------------------- alt footer ----------------------------------------------------->
+
+        <section id="Contact-Me">
+            <div id="Contact-Div">
+                <h1>Contact Me</h1>
+                <p>Atlanta, GA</p>
+                <p>realdarnellchen@gmail.com</p>
+                <p>dchen458@gatech.edu</p>
+                <div class="socials">
+                    <div class="socials-container">
+                        <a href="https://www.linkedin.com/in/darnell-chen/">
+                            <img class="socials-logo" src="images/socials/Linkedin.png" alt="Linkedin">
+                        </a>
+                        <a href="https://github.com/Darnell-Chen">
+                            <img class="socials-logo" src="images/socials/Github.png" alt="Github">
+                        </a>
+                        <a href="https://www.instagram.com/darnell_all_lowercase/">
+                            <img class="socials-logo" src="images/socials/Instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <p>Site made by Darnell Chen</p>
+            </div>
+        </section>
+
+
+        <!------------------------------------------------------ Footer ------------------------------------------------------->
+
+
+        <footer>
+            <div style="margin: 0; background: #5c8aca;" id="footer-div">
+                <p style="font-size: 1.5vh; text-align: center; margin:0px;">
+                    &#169; 2024 by Darnell Chen &verbar; All Rights Reserved &verbar; 
+                    <a href="mailto:realadarnellchen@gmail.com">Contact Me</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

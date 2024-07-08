@@ -17,17 +17,20 @@ $(document).ready(function() {
 
         const newPhoto = Math.floor(Math.random() * photoList.length);
         const newSrc = '../../images/myPics/' + photoList[newPhoto].photo;
+        const newDate = photoList[newPhoto].date;
+        const newWhere = photoList[newPhoto].where;
 
         const currImage = $(this).find("img")[0];
+        const dateText = $(this).find(".photo-right-text")[0];
+        const whereText = $(this).find(".photo-left-text")[0];
 
-        $(currImage).fadeOut(750, function() {
-            // Fade out the current image slowly
-            $(currImage).attr("src", newSrc); // Set the src attribute to load the new image
-            $(currImage).fadeIn(400)
+        $(currImage).fadeOut(600, function() {
+            $(currImage).attr("src", newSrc);
+            $(currImage).fadeIn(600)
+
+            $(dateText).html(newDate);
+            $(whereText).html(newWhere);
         });
-
-
-
         
     });
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/jQuery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/photos.css">
+        <script src="js/nav.js"></script>
+        <script type="module" src="js/photos/photos.js"></script>
+        <script type="module" src="js/photos/photoList.js"></script>
+    </head>
+    <body onload="navPage('photos.html')">
+        <div id="alt-intro"></div>
+
+        <section id="navSection" class="container-fluid">
+          <nav id="myNav" class="navbar fixed-top navbar-expand-md navbar-dark">
+              <a class="navbar-brand" href="#">
+                  <span id="myLogo">
+                      <span id="logoBegin">@</span>
+                      Darnell_Chen</span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myPages">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="myPages">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a id="navHome" class="nav-link" href="#">&emsp; Home &emsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navProjects" class="nav-link" href="#">&emsp; Projects &emsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navPhotos" class="nav-link" href="#">&emsp; Photos &emsp;</a>
+                  </li>
+              </div>
+            </nav>
+        </section>
+
+        <section class="container-fluid" id="photoSection">
+          <div class="photo-wrapper row">
+          </div>
+        </section>
+
+        <footer>
+          <div id="footer-div">
+              <p>
+                  <span id="contactMe"><a href="mailto:realdarnellchen@gmail.com">Contact Me</a></span>
+                  <span id="madeBy">made by Darnell Chen</span>
+  
+                  <span></span>
+              </p>
+          </div>
+      </footer>
+
+
+    </body>
+</html>
