@@ -13,7 +13,7 @@ const photoList = [{
     description: "Zach's Apartment"
 },{
     photo: "04-25-2023-4.jpg",
-    where: "@ Communication Hills, San Jose",
+    where: "@ Communications Hill, SJ",
     date: "April 25, 2023",
     description: "The hill left thorns in my socks"
 },{
@@ -27,7 +27,7 @@ const photoList = [{
     description: "Me and Bebey (the Teddy Bear)"
 },{
     photo: "05-18-2023-1.jpg",
-    where: "@ DeYoung Museum, SF",
+    where: "@ Blue Heron Lake, SF",
     date: "May 18, 2023",
     description: "With the duckies at Blue Heron Lake"
 },{

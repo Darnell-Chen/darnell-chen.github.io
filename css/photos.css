@@ -1,20 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
+
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     height: 100%;
-    display: grid;
 }
 
+
 #photoSection {
-    background-color: transparent;
-    height: 85vh;
-    margin-top: 10vh;
+    background: white;
+    background-image: radial-gradient(var(--baseColor) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+    min-height: 85vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
     display: flex;
 }
 
 section img{
     width: 100%;
+}
+
+.even-photo {
+    transform: rotate(4deg);
+}
+
+.odd-photo {
+    transform: rotate(-3deg);
+}
+
+@keyframes shake{
+    15% {
+        transform: rotate(-3deg);
+    }
+    30% {
+        transform: rotate(3deg);
+    }
+    45% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
 }
 
 .photo-wrapper {
@@ -24,11 +56,17 @@ section img{
 }
 
 .photo-polaroid-padding {
-    background: linear-gradient(217deg, rgba(255, 180, 180, 0.5), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(143, 255, 143, 0.5), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(255, 255, 255, 0.5), rgba(0,0,255,0) 70.71%);
+    background: linear-gradient(217deg, rgb(161, 233, 255), rgba(255,0,0,0) 90.71%),
+            linear-gradient(127deg, rgb(207, 255, 207), rgba(0,255,0,0) 90.71%),
+            linear-gradient(336deg, rgb(255, 212, 212), rgba(0,0,255,0) 90.71%);
     padding: 4% 4% 1% 4%;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+.photo-polaroid-padding:hover {
+    animation: 0.8s ease-in-out shake;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 5px 55px var(--baseColor);
 }
 
 .photo p {
@@ -36,11 +74,15 @@ section img{
 }
 
 .photo-left-text {
-    color: black;
+    font-weight: bold;
+    color: rgb(105, 120, 255);
+    font-family: 'Cedarville Cursive', cursive;
 }
 
 .photo-right-text {
-    color: black;
+    font-weight: bold;
+    font-family: 'Cedarville Cursive', cursive;
+    color: rgb(105, 120, 255);
     float: right;
 }
 
