@@ -3,9 +3,9 @@ const photoList = [{
     where: "@ Cattyshack Cafe, Fort Myers",
     date: "July 18, 2023"
 },{
-    photo: "fall-2023-1.jpg",
+    photo: "fall-2022-1.jpg",
     where: "@ The Piers, SF",
-    date: "Fall 2023",
+    date: "Fall 2022",
     description: "Out for a walk at night"
 },{
     photo: "04-16-2023-1.jpg",
