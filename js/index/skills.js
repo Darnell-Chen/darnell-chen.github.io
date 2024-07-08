@@ -1,4 +1,4 @@
-function skillAnim(){
+$(document).ready(function() {
     const animElements = document.getElementsByClassName("skills");
 
     const observer = new IntersectionObserver((entries) => {
@@ -21,5 +21,4 @@ function skillAnim(){
 
         observer.observe(currSkill);
     }
-
-}
+})

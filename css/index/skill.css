@@ -98,11 +98,13 @@
 /*     Sets initial percentage     */
 
 .java {width: var(--initialPercent); background-color: var(--proficient);}
-.python {width: var(--initialPercent); background-color: var(--intermediate);}
-.js {width: var(--initialPercent); background-color: var(--fair);}
-.css {width: var(--initialPercent); background-color: var(--fair);}
-.html {width: var(--initialPercent); background-color: var(--fair);}
-
+.python {width: var(--initialPercent); background-color: var(--fair);}
+.js {width: var(--initialPercent); background-color: var(--intermediate);}
+.css {width: var(--initialPercent); background-color: var(--intermediate);}
+.html {width: var(--initialPercent); background-color: var(--intermediate);}
+.reactjs {width: var(--initialPercent); background-color: var(--intermediate);}
+.nodejs {width: var(--initialPercent); background-color: var(--fair);}
+.mongodb {width: var(--initialPercent); background-color: var(--fair);}
 
 /* Attaches the animation to grow to final percentage */
  
@@ -114,24 +116,38 @@
 
 .skillAnim.python {
     animation-delay: var(--barDelay);
-    animation: intermediateAnim 2s ease-in-out forwards;
+    animation: fairAnim 2s ease-in-out forwards;
 }
 
 .skillAnim.js {
     animation-delay: var(--barDelay);
-    animation: fairAnim 2s ease-in-out forwards;
+    animation: intermediateAnim 2s ease-in-out forwards;
 }
 
 .skillAnim.css {
     animation-delay: var(--barDelay);
-    animation: fairAnim 2s ease-in-out forwards;
+    animation: intermediateAnim 2s ease-in-out forwards;
 }
 
 .skillAnim.html {
     animation-delay: var(--barDelay);
+    animation: intermediateAnim 2s ease-in-out forwards;
+}
+
+.skillAnim.reactjs{
+    animation-delay: var(--barDelay);
+    animation: intermediateAnim 2s ease-in-out forwards;
+}
+
+.skillAnim.nodejs {
+    animation-delay: var(--barDelay);
     animation: fairAnim 2s ease-in-out forwards;
 }
 
+.skillAnim.mongodb {
+    animation-delay: var(--barDelay);
+    animation: fairAnim 2s ease-in-out forwards;
+}
 
 /* Our Various Animations */
 

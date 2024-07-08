@@ -1,16 +1,17 @@
-function moveIntroScreen() {
-
-    // we'll store whether or not the intro screen was played inside of session storage
-    if (sessionStorage.getItem("played") === null) {
-        document.getElementById("intro-screen").addEventListener("click", commenceIntro);
-        sessionStorage.setItem("played", "true");
-    } else {
-        var introContainer = document.getElementById("intro-container");
-        introContainer.style.opacity = "1";
-        commenceIntro();
-        sessionStorage.setItem("played", null);
+$(document).ready(
+    function() {
+        // we'll store whether or not the intro screen was played inside of session storage
+        if (sessionStorage.getItem("played") === null) {
+            document.getElementById("intro-screen").addEventListener("click", commenceIntro);
+            sessionStorage.setItem("played", "true");
+        } else {
+            var introContainer = document.getElementById("intro-container");
+            introContainer.style.opacity = "1";
+            commenceIntro();
+            sessionStorage.setItem("played", null);
+        }
     }
-}
+)
 
 function commenceIntro(){
     var introContainer = document.getElementById("intro-container");

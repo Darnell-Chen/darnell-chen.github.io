@@ -1,98 +1,69 @@
-function navPage(currPage) {
+$(document).ready(function() {
+    $("#project-section").hide();
+    $("#photoSection").hide();
 
-    const deleteTransitionDiv = () => {
-        document.getElementById("transitionDiv").remove();
-    }
+    const slideUpSpeed = 700;
+    const slideDownSpeed = 700;
 
-    deleteTransitionDiv;
+    let curr = '#index-wrapper';
 
-    // this part simply adds brackets and boldens the nav item we're currently on
-    markCurrPage(currPage);
+    $("#navHome").click(function() {
+        if (curr != '#index-wrapper') {
+            $('#secondary-body').slideUp(slideUpSpeed);
 
-    // these will create the anims that slides the divs up
-    let index = document.getElementById("navHome");
-    index.addEventListener("click", goIndex);
+            setTimeout(function() {
+                $('#index-wrapper').show();
 
-    function goIndex() {
-        if (currPage !== "index.html") {
-            divAnimation();
+                $('#project-section').hide();
+                $('#photoSection').hide();
+                
+                setTimeout(function() {
+                    $('#secondary-body').slideDown(slideDownSpeed);
+                }, 300);
+            }, 700)
 
+            curr = '#index-wrapper';
+        }
+    })
+
+    $("#navProjects").click(function() {
+        if (curr != '#project-section') {
+
+            $('#secondary-body').slideUp(slideUpSpeed);
+
+            setTimeout(function() {
+                $('#project-section').show();
+
+                $('#index-wrapper').hide();
+                $('#photoSection').hide();
+
+                setTimeout(function() {
+                    $('#secondary-body').slideDown(slideDownSpeed);
+                }, 300);
+            }, 700)
             
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 550);
+
+            curr = '#project-section';
         }
-    }
+    })
 
+    $("#navPhotos").click(function() {
+        if (curr != '#photoSection') {
 
-    let projects = document.getElementById("navProjects");
+            $('#secondary-body').slideUp(slideUpSpeed);
 
-    projects.addEventListener("click", goProjects);
+            setTimeout(function() {
+                $('#project-section').hide();
+                $('#index-wrapper').hide();
 
-    function goProjects() {
-        if (currPage !== "projects.html") {
-            divAnimation();
+                $('#photoSection').show();
 
-            setTimeout(() => {
-                window.location.href = "projects.html";
-            }, 550);
+                setTimeout(function() {
+                    $('#secondary-body').slideDown(slideDownSpeed);
+                }, 300);
+            }, 700)
+
+            curr = '#photoSection';
         }
-    }
-
-    let photos = document.getElementById("navPhotos");
-    photos.addEventListener("click", goPhotos);
-
-    function goPhotos() {
-        if (currPage !== "photos.html") {
-            divAnimation();
-
-            setTimeout(() => {
-                window.location.href = "photos.html";
-            }, 550);
-        }
-    }
-}
-
-function divAnimation() {
-    const BASECOLOR = "#87b9ff";
-
-    var div = document.createElement("div");
-    div.style.width = "100vw";
-
-    // better safe than sorry w/ height
-    div.style.height = "150vh";
-    div.style.backgroundColor = BASECOLOR;
-    div.style.position = "fixed";
-    div.style.top = "0";
-    div.style.zIndex = "1000"
-    div.setAttribute("id", "transitionDiv")
-    div.style.transform = "translateY(100vh)";
-    
-    document.body.appendChild(div);
-
-
-    window.requestAnimationFrame(() => {
-        // Apply the transition style
-        div.style.transition = "all 0.5s ease-in-out";
-
-        div.style.transform = "translateY(0)";
-    });
-}
-
-function markCurrPage(currPage) {
-
-    switch(currPage) {
-        case "index.html":
-            document.getElementById("navHome").innerHTML = "&#12298 Home &#12299";
-            document.getElementById("navHome").style.fontWeight = "bold";
-            break;
-        case "projects.html":
-            document.getElementById("navProjects").innerHTML = "&#12298 Projects &#12299";
-            document.getElementById("navProjects").style.fontWeight = "bold";
-            break;
-        case "photos.html":
-            document.getElementById("navPhotos").innerHTML = "&#12298 Photos &#12299";
-            document.getElementById("navPhotos").style.fontWeight = "bold";
-            break;
-    }
-}
+    })
+})
