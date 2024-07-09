@@ -3,13 +3,14 @@ $(document).ready(function() {
     $("#photoSection").hide();
 
     const slideUpSpeed = 700;
-    const slideDownSpeed = 700;
+    const slideDownSpeed = 850;
 
     let curr = '#index-wrapper';
 
     $("#navHome").click(function() {
         if (curr != '#index-wrapper') {
             $('#secondary-body').slideUp(slideUpSpeed);
+            $('#myImage').slideUp();
 
             setTimeout(function() {
                 $('#index-wrapper').show();
@@ -19,6 +20,10 @@ $(document).ready(function() {
                 
                 setTimeout(function() {
                     $('#secondary-body').slideDown(slideDownSpeed);
+
+                    setTimeout(function() {
+                        $('#myImage').slideDown();
+                    }, 200);
                 }, 300);
             }, 700)
 
