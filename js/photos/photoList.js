@@ -76,7 +76,7 @@ const photoList = [{
     description: "About to head into the Museum"
 },{
     photo: "12-28-2023-1.jpg",
-    where: "@ Bakers Museum, Fort Myers",
+    where: "@ Baker Museum, Naples",
     date: "December 28, 2023",
     description: "im homeless"
 },{
