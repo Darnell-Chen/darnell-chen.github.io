@@ -21,6 +21,7 @@ html, body {
 
 section img{
     width: 100%;
+    aspect-ratio: 352.156 / 469.531;
 }
 
 .even-photo {
