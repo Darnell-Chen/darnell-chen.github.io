@@ -7,9 +7,9 @@ $(document).ready(function() {
                 entry.target.parentNode.classList.add("backAnim");
                 entry.target.classList.add("skillAnim");
             } else {
-                entry.target.parentNode.classList.remove("backAnim");
-                entry.target.classList.remove("skillAnim");
-                // I could technically add more keyframe animations so that it adds another class that retracts the bar
+                // entry.target.parentNode.classList.remove("backAnim");
+                // entry.target.classList.remove("skillAnim");
+                null;
             }
         })
     }, {
