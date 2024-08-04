@@ -3,72 +3,52 @@ $(document).ready(function() {
     $("#photoSection").hide();
 
     const slideUpSpeed = 700;
+    // make sure slide down speed is always greater than slide up
     const slideDownSpeed = 850;
 
-    let curr = '#index-wrapper';
+    // index-wrapper is what wraps around every section on the first page
+    const myPages = ['#index-wrapper','#project-section','#photoSection'];
 
-    $("#navHome").click(function() {
-        if (curr != '#index-wrapper') {
-            $('#secondary-body').slideUp(slideUpSpeed);
-            $('#myImage').slideUp();
+    const changePage = (nextPage) => {
+        // same thing as 'for (String pages: myPages)' loop in Java
+        $('#myImage').hide();
+        $('#secondary-body').slideUp(slideUpSpeed);
+
+        setTimeout(function() {
+            for (const page of myPages) {
+                $(page).hide();
+            }
+        }, slideUpSpeed + 100);
+        
+        setTimeout(function() {
+            for (const page of myPages) {
+                $(page).hide();
+            }
+
+            $(nextPage).show();
 
             setTimeout(function() {
-                $('#index-wrapper').show();
+                $('#secondary-body').slideDown(slideUpSpeed);
 
-                $('#project-section').hide();
-                $('#photoSection').hide();
-                
-                setTimeout(function() {
-                    $('#secondary-body').slideDown(slideDownSpeed);
+                // SPECIFICALLY TO PREVENT JUMPING OF THE INDEX IMAGE
+                setTimeout(() => {
+                    $('#myImage').show();
+                }, 200);
+            }, 100)
+        }, slideDownSpeed);
 
-                    setTimeout(function() {
-                        $('#myImage').slideDown();
-                    }, 200);
-                }, 300);
-            }, 700)
+    }
 
-            curr = '#index-wrapper';
-        }
+    $("#navHome").click(function() {
+        // SPECIFICALLY TO PREVENT IMAGE JUMPING ON INDEX PAGE
+        changePage('#index-wrapper');
     })
 
     $("#navProjects").click(function() {
-        if (curr != '#project-section') {
-
-            $('#secondary-body').slideUp(slideUpSpeed);
-
-            setTimeout(function() {
-                $('#project-section').show();
-
-                $('#index-wrapper').hide();
-                $('#photoSection').hide();
-
-                setTimeout(function() {
-                    $('#secondary-body').slideDown(slideDownSpeed);
-                }, 300);
-            }, 700)
-            
-
-            curr = '#project-section';
-        }
+        changePage('#project-section');
     })
 
     $("#navPhotos").click(function() {
-        if (curr != '#photoSection') {
-
-            $('#secondary-body').slideUp(slideUpSpeed);
-
-            setTimeout(function() {
-                $('#project-section').hide();
-                $('#index-wrapper').hide();
-
-                $('#photoSection').show();
-
-                setTimeout(function() {
-                    $('#secondary-body').slideDown(slideDownSpeed);
-                }, 300);
-            }, 700)
-
-            curr = '#photoSection';
-        }
+        changePage('#photoSection');
     })
 })
