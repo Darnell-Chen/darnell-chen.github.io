@@ -10,14 +10,13 @@ $(document).ready(function() {
     const myPages = ['#index-wrapper','#project-section','#photoSection'];
 
     const changePage = (nextPage) => {
-        // same thing as 'for (String pages: myPages)' loop in Java
-        $('#myImage').hide();
         $('#secondary-body').slideUp(slideUpSpeed);
 
         setTimeout(function() {
             for (const page of myPages) {
-                $(page).hide();
+                $("#myImage").css("visibility", "hidden");
             }
+            $(page).hide();
         }, slideUpSpeed + 100);
         
         setTimeout(function() {
@@ -30,9 +29,9 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#secondary-body').slideDown(slideUpSpeed);
 
-                // SPECIFICALLY TO PREVENT JUMPING OF THE INDEX IMAGE
+                // SPECIFICALLY TO HIDE THE JUMPING OF THE PHOTO
                 setTimeout(() => {
-                    $('#myImage').show();
+                    $("#myImage").css("visibility", "visible");
                 }, 200);
             }, 100)
         }, slideDownSpeed);
@@ -40,7 +39,6 @@ $(document).ready(function() {
     }
 
     $("#navHome").click(function() {
-        // SPECIFICALLY TO PREVENT IMAGE JUMPING ON INDEX PAGE
         changePage('#index-wrapper');
     })
 

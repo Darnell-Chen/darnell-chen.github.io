@@ -5,6 +5,7 @@ $(document).ready(
             document.getElementById("intro-screen").addEventListener("click", commenceIntro);
             sessionStorage.setItem("played", "true");
         } else {
+            deleteIntroMsg();
             var introContainer = document.getElementById("intro-container");
             introContainer.style.opacity = "1";
             commenceIntro();
@@ -12,6 +13,12 @@ $(document).ready(
         }
     }
 )
+
+function deleteIntroMsg() {
+    $(".intro-p").remove();
+    $(".intro-p2").remove();
+    $(".intro-p3").remove();
+}
 
 function commenceIntro(){
     var introContainer = document.getElementById("intro-container");

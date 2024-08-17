@@ -1,5 +1,18 @@
 
 const project_list = [{
+    projectName: "Receipt Vault",
+    date: "July - August 2024",
+    language:"TS | JS | HTML | CSS",
+    link: "https://github.com/Darnell-Chen/Receipt-Vault-WIP",
+    summary: "Receipt Vault is a mobile app that takes advantage of Mindee's Receipt OCR to parse and store receipts efficiently. \
+    The app also offers users the ability to summarize their recent spendings. \
+    This project was inspired by the fact that my family often hoard itemized receipts.",
+    framework: "MySQL, ExpressJS, React Native, NodeJS, Expo",
+    libraries: "JWT, Formik, yup, etc.",
+    APIs: "Mindee Receipt OCR",
+    image: "../../images/projects/Receipt.jpg",
+    IDE: "VSCode"
+}, {
     projectName: "SMS RemindR",
     date: "May - July 2024",
     language:"JS | HTML | CSS",
