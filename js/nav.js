@@ -46,7 +46,7 @@ $(document).ready(function() {
         changePage('#project-section');
     })
 
-    $("#navPhotos").click(function() {
-        changePage('#photoSection');
-    })
+    // $("#navPhotos").click(function() {
+    //     changePage('#photoSection');
+    // })
 })
